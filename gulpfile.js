@@ -1,0 +1,38 @@
+'use strict';
+
+global.$ = {
+    package: require('./package.json'),
+    config: require('./gulp/config.js'),
+    paths: {
+        tasks: require('./gulp/paths/tasks.js'),
+        cssComponents: './gulp/paths/css.components.json',
+        jsComponents: './gulp/paths/js.components.json',
+        fonts: './gulp/paths/fonts.json',
+        favicon: './sources/static/favicon/faviconData.json'
+    },
+    gulp: require('gulp'),
+    gp: require('gulp-load-plugins')(),
+    combiner: require('stream-combiner2').obj,
+    del: require('del'),
+    browserSync: require('browser-sync').create(),
+    emittyPug: require('emitty').setup('sources', 'pug'),
+    map: require('map-stream'),
+    fs: require('fs'),
+    autoprefixerStylus: require('autoprefixer-stylus'),
+    path: require('path'),
+
+    faviconData: require('./sources/static/favicon/faviconData.json'),
+
+    blocksObj: {},
+    blocksArr: [],
+
+    emittyChangedFile: '',
+    stylusChangedFile: '',
+
+    isDevelopment: process.env.NODE_ENV !== 'production',
+    isWatch: false
+};
+
+$.paths.tasks.forEach(function(taskPath) {
+    require(taskPath)();
+});

@@ -1,0 +1,34 @@
+include ../social-networks/social-networks
+include ../pay-systems/pay-systems
+
+mixin footer()
+  footer.-footer&attributes(attributes)
+    .-container-fluid
+      .-row.footer__row
+        .-col-xs-12.col-sm-12.col-md-4.footer__col.footer__col_order_1
+          section.-footer.__section
+            h4.__title Информация
+            p.
+              &copy;&nbsp;2016&mdash;2017 «Medical Target»
+            +social-networks()
+        .-col-xs-12.col-sm-12.col-md-4.footer__col.footer__col_order_3
+          section.-footer.__section._last
+            h4.__title Контакты
+            p.
+              Москва, 2-й Тверской-Ямской переулок, дом 10 (метро "Маяковская")
+            p.
+              Телефон: #[a(href='tel:88003003030') 8-800-300-3030] #[br]E-mail: #[a(href='medicaltarget@gmail.com') medicaltarget@gmail.com]
+        .-col-xs-12.col-sm-12.col-md-4.footer__col.footer__col_order_2
+          section.-footer.__section
+            h4.__title О компании
+            p.
+              Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. #[br]
+              Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+        .-col-xs-12.col-sm-12.col-md-12.footer__col.footer__col_order_4
+          .-row
+            .-col-xs-12.col-md-4
+              +pay-systems()
+            .-col-xs-12.col-md-4
+              p.-footer.__license.
+                Лицензия ЛО 77-01-012912
+    block

@@ -1,0 +1,13 @@
+mixin share-box()
+  // goodshare.js https://github.com/koddr/goodshare.js/blob/master/README.md
+  .-share-box
+    | Поделиться:&nbsp;
+    +a().__item(data-social='facebook' title='Facebook') Facebook
+      //-span.__counter(data-counter='fb')
+    | ,&nbsp
+    +a().__item(data-social='twitter' title='Twitter') Twitter
+      //-span.__counter(data-counter='tw')
+    | ,&nbsp
+    +a().__item(data-social='pinterest' title='Twitter') Pinterest
+      //-span.__counter(data-counter='tw')
+  // /goodshare.js

@@ -1,0 +1,9 @@
+[
+  "sources/static/fonts/MuseoSansCyrl/MuseoSansCyrl.css",
+  "sources/static/fonts/glyphicons/glyphicons.css",
+  "sources/static/fonts/font-awesome/font-awesome.css",
+  "sources/components/bootstrap/css/index.styl",
+  "sources/components/img-object-fit/img-object-fit.css",
+  "bower_components/fancybox/dist/jquery.fancybox.css",
+  "bower_components/slick-carousel/slick/slick.css"
+]

@@ -1,0 +1,88 @@
+.showcase-new-2
+  display block
+  overflow hidden
+  float left
+  text-decoration none
+  width 50%
+  &:hover, &:focus
+    text-decoration none
+
+  &__col
+    padding-top percentage(256/512)
+    position relative
+
+    &_2
+      &:before
+        content ''
+        border-left 75px solid transparent
+        border-right 75px solid transparent
+        border-bottom 56px solid white
+        position absolute
+        bottom 100%
+        left 50%
+        z-index 1
+        margin 0 -75px
+      & {r}__content
+        text-align center
+        background-color white
+        padding 45px 35px
+      & {r}__text
+        overflow hidden
+        color #242323
+        font-size 14px
+        font-weight 500
+        line-height (24/14)em
+        max-height (24/14)em*5
+
+  &__img
+    position absolute
+    top 0
+    left 0
+
+  &__content
+    padding 36px
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+
+  &__section
+    display inline-block
+    vertical-align top
+    color #353535
+    font-size 10px
+    line-height 1em
+    font-weight 500
+    text-transform uppercase
+    margin 0 0 30px 5px
+    &:after
+      content ''
+      display block
+      size 21px 1px
+      border-bottom 1px solid #e98832
+      margin 8px auto 0
+
+  &__title
+    color white
+    font-size 24px
+    font-weight 400
+    line-height 1.25em
+    height 100%
+    padding 20px 75px
+    position relative
+    margin 0
+    background-color rgba(#010d16, 0.75)
+    &:before
+      content ''
+      display inline-block
+      vertical-align middle
+      height 100%
+
+  &__title-fix
+    display inline-block
+    vertical-align middle
+    overflow hidden
+    width 100%
+    max-height calc(1.25em*3 + 4px)
+    padding-bottom 4px

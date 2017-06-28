@@ -1,0 +1,75 @@
+.btn
+  display inline-block
+  line-height 1.25em
+  text-align center
+  vertical-align top
+  touch-action manipulation
+  cursor pointer
+  background none // Reset unusual Firefox-on-Android default style see https://github.com/necolas/normalize.css/issues/214
+  border 0
+  text-overflow ellipsis
+  max-width 100%
+  padding 0
+  user-select none
+  text-decoration none
+  transition $transition-base
+
+  &,
+  &:active,
+  &.active
+    &:focus,
+    &.focus
+      outline 0
+
+  &:hover,
+  &:focus,
+  &.focus
+    //color $btn-default-color
+    text-decoration none
+
+  &:active,
+  &.active
+    outline 0
+    //background-image none
+    //box-shadow inset 0 3px 5px rgba(0, 0, 0, .125)
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] &
+    disabled()
+
+  &__icon
+    display inline-block
+    vertical-align top
+
+  &_1
+    color white
+    font-weight 900
+    font-size rem(14px)
+    text-transform uppercase
+    padding rem(14px) rem(30px) rem(12px)
+    background-color $blue-1
+    &:hover,
+    &:focus,
+    &.focus
+      color white
+      background-color $black-1
+    &:active,
+    &.active
+      box-shadow inset 0 3px 5px rgba(0, 0, 0, .125)
+
+  &_2
+    color white
+    font-weight 900
+    font-size rem(16px)
+    text-transform uppercase
+    padding rem(23px) rem(50px) rem(21px)
+    background-color $blue-1
+    &:hover,
+    &:focus,
+    &.focus
+      color white
+      background-color $black-1
+    &:active,
+    &.active
+      box-shadow inset 0 3px 5px rgba(0, 0, 0, .125)

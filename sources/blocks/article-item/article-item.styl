@@ -1,0 +1,73 @@
+.article-item
+  display inline-block
+  vertical-align top
+  box-shadow 0 0 10px rgba(#d8d8d8, 0.4)
+  page-break-inside avoid
+  p
+    display inline
+
+  &__img-wrap
+    display block
+    overflow hidden
+    position relative
+    &:hover, &:focus
+      &~{r}__content {r}__title-link
+        color $red-1
+
+  &__img
+    display block
+    width 100%
+
+  &__section
+    color white
+    font-size 10px
+    line-height 1em
+    font-weight 500
+    text-transform uppercase
+    white-space nowrap
+    padding 8px 15px 6px
+    position absolute
+    left 8px
+    bottom 7px
+    z-index 1
+    background-color #252525
+
+  &__content
+    padding 20px 23px 23px
+    background-color white
+
+  &__title
+    margin 0 0 10px
+
+  &__title-link
+    display block
+    overflow hidden
+    color #171717
+    text-decoration none
+    font-weight 400
+    font-size 18px
+    line-height (20/18)em
+    max-height (20/18)em*2
+    line-clamp 2
+    &:hover, &:focus
+      color $red-1
+      text-decoration none
+
+  &__date
+    display block
+    color #171717
+    font-family Roboto, sans-serif
+    font-size 11px
+    font-weight 400
+    line-height 1em
+    margin-bottom 15px
+
+  &__text
+    overflow hidden
+    color #5f5f5f
+    font-family Roboto, sans-serif
+    font-size 13px
+    font-weight 300
+    line-height (18/13)em
+    max-height (18/13)em*3
+    line-clamp 3

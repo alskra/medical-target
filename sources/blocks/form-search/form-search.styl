@@ -1,0 +1,51 @@
+.form-search
+  &__hidden
+    border-bottom 1px solid #dfdfdf
+
+  &__field
+    color #888
+    font-weight 300
+    font-size rem(20px)
+    line-height rem(60px)
+    width 100%
+    height rem(60px)
+    padding 0 rem(20px)
+    border 0
+    background white
+    transition $transition-base
+    &::placeholder
+      color rgba(#888, 0.5)
+    input&
+      box-sizing border-box
+
+  @media (min-width $screen-md-min)
+    display flex
+    margin 0 (- $grid-gutter-width) 0 auto
+
+    &__hidden
+      overflow hidden
+      width 0
+      border 0
+
+    &__field
+      font-size rem(36px)
+      line-height rem(79px)
+      height rem(79px)
+
+    &__btn
+      color $blue-1
+      font-size rem(21rem)
+      line-height rem(79px)
+      padding 0 $grid-gutter-width
+      border 0
+      background none
+      transition color $transition-duration-base $transition-timing-function-base
+      &:hover, &:focus
+        color darken($blue-1, 15%)
+
+    &_opened
+      width unquote('calc(100% + ' + $grid-gutter-width*2 + ')')
+      margin-left (- $grid-gutter-width)
+      & {r}__hidden
+        flex 1 1 auto
+

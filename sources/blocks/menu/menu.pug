@@ -1,0 +1,26 @@
+-
+  var menuList = [
+    {title: 'О нас', url: '#about'},
+    {title: 'Услуги', url: '#services'},
+    {title: 'Специалисты', url: '#experts'},
+    {title: 'Отзывы', url: '#reviews'},
+    {title: 'Новости', url: '#news'},
+    {title: 'Фото', url: '#photos'},
+    {title: 'Цены', url: '#prices'},
+    {title: 'Контакты', url: '#contacts'}
+  ];
+
+mixin menu(menuList)
+  nav.-menu&attributes(attributes)
+    each itemLvl1 in menuList
+      .__item._lvl_1(class={_submenu: itemLvl1.submenu, _current: itemLvl1.url === currentUrls[0]})
+        a.__btn._lvl_1(href=itemLvl1.url)=itemLvl1.title
+          //-span.__label._lvl_1=itemLvl1.title
+          //- span.__icon._lvl_1 &nbsp;
+        if itemLvl1.submenu
+          .__submenu._lvl_1
+            each itemLvl2 in itemLvl1.submenu
+              .__item._lvl_2(class={_submenu: itemLvl2.submenu, _current: itemLvl2.url === currentUrls[1]})
+                a.__btn._lvl_2(href=itemLvl2.url)
+                  //-span.__label._lvl_2=itemLvl2.title
+                  //-span.__icon._lvl_2 &nbsp;

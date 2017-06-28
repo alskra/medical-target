@@ -1,0 +1,110 @@
+.slider-main
+  overflow hidden
+  height calc(100vh - 3.75rem)
+  background-color white
+  p
+    margin 0
+  .slick-list, .slick-track, .slick-slide
+    height 100%
+
+  &__item
+    position relative
+
+  &__img
+    position absolute
+    top 0
+    left 0
+
+  &__content
+    padding rem(30px) 0
+    opacity 1
+    transition 0.2s linear
+    position relative
+    .loading &
+      opacity 0
+
+  &__title
+    overflow hidden
+    color #888
+    font-size 7vh
+    font-weight 300
+    line-height 1.25em
+    max-height 1.25em*3
+    line-clamp 3
+    text-shadow 1px 1px 1px rgba(white)
+    margin 0 0 0.5em
+
+  &__text
+    overflow hidden
+    color #666
+    font-size 4vh
+    line-height (24/18)em
+    max-height (24/18)em*4
+    line-clamp 4
+    text-shadow 1px 1px 1px rgba(white)
+    margin 0 0 2em
+
+  @media (min-width $screen-sm-min)
+    height rem(600px)
+
+    &__content
+      padding-left rem(55px)
+
+    &__title
+      font-size rem(40px)
+      max-height 1.25em*2
+      line-clamp 2
+
+    &__text
+      margin-bottom 3em
+
+    &__text
+      font-size rem(18px)
+
+    &__article
+      color #666
+      font-size rem(18px)
+      line-height (24/18)em
+      padding 0 0 0 rem(110px)
+      position relative
+      margin 0 0 rem(50px)
+
+    &__article-icon
+      color $blue-1
+      text-align center
+      font-size rem(73px)
+      line-height 1em
+      width rem(80px)
+      position absolute
+      top 0.3rem
+      left 0
+      &.glyphicon-sister
+        font-size rem(74px)
+      &.glyphicon-heart
+        font-size rem(64px)
+
+    &__article-title
+      font-size rem(24px)
+      text-overflow ellipsis
+      overflow hidden
+      text-shadow 1px 1px 1px rgba(white)
+      margin 0 0 0.5em
+
+    &__article-text
+      overflow hidden
+      max-height (24/18)em*2
+      line-clamp 2
+      text-shadow 1px 1px 1px rgba(white)
+
+    &__action
+      color $black-1
+      font-size rem(24px)
+      p&
+        margin-bottom 1em
+
+  @media (min-width $screen-md-min)
+    height rem(790px)
+
+    &__content
+      padding-top rem(65px)
+      padding-bottom rem(65px)

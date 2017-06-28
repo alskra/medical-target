@@ -1,0 +1,188 @@
+include ../blocks/doctype/doctype
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+include ../blocks/aside-slideout/aside-slideout
+include ../blocks/countdown/countdown
+
+- currentUrls = [pages.index.url]
+
++doctype(pages.index.title)
+  +aside-slideout().slideout-menu.slideout-menu-left
+  .-wrapper.slideout-panel.slideout-panel-left
+    +header()
+    +content()
+      block slider-main
+        .-slider-main.slick-slider(data-slick='{"autoplay": false, "autoplaySpeed": 7000}' data-slideout-ignore)
+          .__item.slick-slide.loading
+            img.__img(
+            data-lazy='static/img/content/slider-main/1920/slide-1.jpg'
+            data-lazy-srcset='static/img/content/slider-main/1366/slide-1.jpg 1366w, ' +
+            'static/img/content/slider-main/1920/slide-1.jpg 1920w, ' +
+            'static/img/content/slider-main/4096/slide-1.jpg 4096w'
+            sizes='100vw'
+            alt='' data-object-fit='cover' onload='objectFit(this)')
+            .-container-fluid
+              .-row
+                .-col-sm-10.col-md-8.col-lg-6
+                  .-slider-main.__content
+                    h1.__title.
+                      Центр превентивной медицины
+                    .__text.hidden-sm
+                      p.
+                        Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все
+                        виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    article.__article.hidden-xs
+                      .__article-icon.glyphicon.glyphicon-stat
+                      h2.__article-title Круглосуточные стационары
+                      .__article-text
+                        p.
+                          Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.
+                          Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    article.__article.hidden-xs
+                      .__article-icon.glyphicon.glyphicon-sister
+                      h2.__article-title Вызов врача на дом
+                      .__article-text
+                        p.
+                          Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.
+                          Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    article.__article.hidden-xs
+                      .__article-icon.glyphicon.glyphicon-heart
+                      h2.__article-title Экстренная хирургическая помощь
+                      .__article-text
+                        p.
+                          Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.
+                          Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    +a('feedback.html').btn.btn_2.hidden-sm.hidden-md.hidden-lg(data-fancybox='feedback?v=1' data-type='ajax') Напишите нам
+          .__item.slick-slide.loading
+            img.__img(
+            data-lazy='static/img/content/slider-main/1920/slide-1.jpg'
+            data-lazy-srcset='static/img/content/slider-main/1366/slide-1.jpg 1366w, ' +
+            'static/img/content/slider-main/1920/slide-1.jpg 1920w, ' +
+            'static/img/content/slider-main/4096/slide-1.jpg 4096w'
+            sizes='100vw'
+            alt='' data-object-fit='cover' onload='objectFit(this)')
+            .-container-fluid
+              .-row
+                .-col-sm-10.col-md-8.col-lg-6
+                  .-slider-main.__content
+                    h2.__title.
+                      При оформлении услуги скидка 50%
+                    .__text.hidden-sm
+                      p.
+                        Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все
+                        виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    p.-slider-main.__action.hidden-xs: strong.
+                      Торопитесь! До конца акции осталось:
+                    +countdown().hidden-xs(data-time='1514667600000')
+                    +a().btn.btn_2 Получить скидку
+          .__item.slick-slide.loading
+            img.__img(
+            data-lazy='static/img/content/slider-main/1920/slide-1.jpg'
+            data-lazy-srcset='static/img/content/slider-main/1366/slide-1.jpg 1366w, ' +
+            'static/img/content/slider-main/1920/slide-1.jpg 1920w, ' +
+            'static/img/content/slider-main/4096/slide-1.jpg 4096w'
+            sizes='100vw'
+            alt='' data-object-fit='cover' onload='objectFit(this)')
+            .-container-fluid
+              .-row
+                .-col-sm-10.col-md-8.col-lg-6
+                  .-slider-main.__content
+                    h2.__title.hidden-xs.
+                      При оформлении услуги скидка 50%
+                    .__text.hidden-xs.hidden-sm
+                      p.
+                        Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все
+                        виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    form.-form-order
+                      .-form-row
+                        label.-form-label
+                          input.-text-field.required(type='text' name='name' required data-msg-required='Введите имя')
+                          span.__text Ваше имя
+                      .-form-row
+                        label.-form-label
+                          input.-text-field.required(type='email' name='email' required data-msg-required='Введите e-mail' data-msg-email='Некорректный e-mail')
+                          span.__text Ваш e-mail
+                      .-form-row
+                        label.-form-label
+                          textarea.-text-field._textarea.required(name='msg' required data-msg-required='Введите сообщение')
+                          span.__text Какая услуга вам необходима?
+                      .-form-row
+                        button.-btn._2(type='submit') Оставить заявку
+      section.-section
+        header.__header
+          .-container-fluid
+            h2.-section.__title Наши услуги
+            p.-section.__lead Центр превентивной медицины
+        .-container-fluid
+          .-services-list
+            .__row.row
+              .__col.col-xs-12.col-lg-3
+                article.-service-item
+                  +a('service-medical-1.html').__img-wrap.glyphicon.glyphicon-plus(data-fancybox='service?v=0' data-type='ajax')
+                    img.__img(
+                    src='static/img/content/services-list/300x188/Fotolia_103968342_Subscription_Monthly_M.jpg'
+                    srcset='static/img/content/services-list/300x188/Fotolia_103968342_Subscription_Monthly_M.jpg 1x, ' +
+                    'static/img/content/services-list/600x376/Fotolia_103968342_Subscription_Monthly_M.jpg 1.25x'
+                    alt='' data-object-fit='cover' onload='objectFit(this)')
+                  h3.__title
+                    +a('service-medical-1.html').__title-link(data-fancybox='service?v=1' data-type='ajax') Лечение
+                  .__description
+                    p.
+                      Наш формат - универсальная семейная клиника, в которой взрослым и
+                      детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+              .__col.col-xs-12.col-lg-3
+                article.-service-item
+                  +a('service-medical-2.html').__img-wrap.glyphicon.glyphicon-plus(data-fancybox='service?v=0' data-type='ajax')
+                    img.__img(
+                    src='static/img/content/services-list/300x188/Fotolia_98084818_Subscription_Monthly_M.jpg'
+                    srcset='static/img/content/services-list/300x188/Fotolia_98084818_Subscription_Monthly_M.jpg 1x, ' +
+                    'static/img/content/services-list/600x376/Fotolia_98084818_Subscription_Monthly_M.jpg 1.25x'
+                    alt='' data-object-fit='cover' onload='objectFit(this)')
+                  h3.__title
+                    +a('service-medical-2.html').__title-link(data-fancybox='service?v=1' data-type='ajax') Диагностика
+                  .__description
+                    p.
+                      Наш формат - универсальная семейная клиника, в которой взрослым и
+                      детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+              .__col.col-xs-12.col-lg-3
+                article.-service-item
+                  +a('service-medical-3.html').__img-wrap.glyphicon.glyphicon-plus(data-fancybox='service?v=0' data-type='ajax')
+                    img.__img(
+                    src='static/img/content/services-list/300x188/Fotolia_78678976_Subscription_Monthly_M.jpg'
+                    srcset='static/img/content/services-list/300x188/Fotolia_78678976_Subscription_Monthly_M.jpg 1x, ' +
+                    'static/img/content/services-list/600x376/Fotolia_78678976_Subscription_Monthly_M.jpg 1.25x'
+                    alt='' data-object-fit='cover' onload='objectFit(this)')
+                  h3.__title
+                    +a('service-medical-3.html').__title-link(data-fancybox='service?v=1' data-type='ajax') Скорая помощь
+                  .__description
+                    p.
+                      Наш формат - универсальная семейная клиника, в которой взрослым и
+                      детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+              .__col.col-xs-12.col-lg-3
+                article.-service-item
+                  +a('service-medical-4.html').__img-wrap.glyphicon.glyphicon-plus(data-fancybox='service?v=0' data-type='ajax')
+                    img.__img(
+                    src='static/img/content/services-list/300x188/Fotolia_82745345_Subscription_Monthly_M-(2).jpg'
+                    srcset='static/img/content/services-list/300x188/Fotolia_82745345_Subscription_Monthly_M-(2).jpg 1x, ' +
+                    'static/img/content/services-list/600x376/Fotolia_82745345_Subscription_Monthly_M-(2).jpg 1.25x'
+                    alt='' data-object-fit='cover' onload='objectFit(this)')
+                  h3.__title
+                    +a('service-medical-4.html').__title-link(data-fancybox='service?v=1' data-type='ajax') Медицинские справки
+                  .__description
+                    p.
+                      Наш формат - универсальная семейная клиника, в которой взрослым и
+                      детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+
+              // Spacers
+              .__col.col-xs-12.col-lg-3
+              .__col.col-xs-12.col-lg-3
+              .__col.col-xs-12.col-lg-3
+              .__col.col-xs-12.col-lg-3
+      section.-section
+        header.__header
+          .-container-fluid
+            h2.-section.__title О компании
+            p.-section.__lead Центр превентивной медицины
+        .-container-fluid
+    +footer()

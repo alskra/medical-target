@@ -1,0 +1,9 @@
+mixin form-subscribe()
+  // Form-subscribe
+  form.-form-subscribe(action='')&attributes(attributes)
+    .__inner
+      span.__icon.glyphicon.glyphicon-at
+      input.-form-subscribe.__field(type='email' placeholder='Получать рассылку')
+      button.-form-subscribe.__btn.btn.glyphicon.glyphicon-angle-right(type='submit')
+    .__label оставьте e-mail
+  // /Form-subscribe

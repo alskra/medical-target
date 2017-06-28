@@ -1,0 +1,29 @@
+.menu-category
+  clearfix()
+  font-family nautilus, sans-serif
+  font-size rem-calc(15)
+  line-height 1.25em
+  margin 5px 0 28px
+
+  &__item
+    float left
+    color inherit
+    text-decoration none
+    margin-right 40px
+    &:hover, &:focus
+      color $green-1
+      text-decoration none
+    &_current
+      color $green-1
+
+  &__icon
+    display inline-block
+    vertical-align top
+    font-size rem-calc(35)
+    margin-right 7px
+    &.glyphicon-bowl-of-food
+      font-size rem-calc(23)
+    &.glyphicon-sausage-and-fork
+      font-size rem-calc(27)
+    &.glyphicon-cocktail-glass
+      font-size rem-calc(23)

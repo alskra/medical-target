@@ -1,0 +1,10 @@
+mixin slider-main()
+  .-slider-main.slick-slider&attributes(attributes)
+    .__item.slick-slide.loading.loading_before
+      img.__item-img(data-lazy='static/img/content/slider-main/1024x432/slide-1.jpg'
+      alt='' data-object-fit='cover' onload='objectFit(this)')
+      .__item-content
+        .__item-section Мода
+        h1.__item-text.
+          Как стать привлекательнее: советы
+        +a(pages.article_1.url).__btn.btn Читать статью

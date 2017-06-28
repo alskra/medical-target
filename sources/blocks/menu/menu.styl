@@ -1,0 +1,57 @@
+.menu
+  background-color white
+
+  &__item
+    overflow hidden
+    &_current
+      &>{$p}__btn
+        &_lvl_1
+          &, &:hover, &:focus
+            color $blue-1
+            &:before
+              background $blue-1
+
+  &__btn
+    display block
+    &_lvl_1
+      color $black-1
+      text-decoration none
+      font-size rem(16px)
+      font-weight 700
+      line-height 1.25em
+      text-transform uppercase
+      text-overflow ellipsis
+      padding rem(16px) $grid-gutter-width rem(15px)
+      position relative
+      &:before
+        content ''
+        width rem(3px)
+        background transparent
+        transition inherit
+        position absolute
+        top 0
+        left 0
+        bottom 0
+      &:hover, &:focus
+        color $blue-1
+        text-decoration none
+        &:before
+          background $blue-1
+
+  &__icon
+    display inline-block
+    vertical-align top
+
+  @media (min-width $screen-md-min)
+    display flex
+    overflow hidden
+    margin 0 0 0 (- $grid-gutter-width)
+
+    &__btn
+      &_lvl_1
+        padding rem(30px) $grid-gutter-width rem(29px)
+        &:before
+          width auto
+          height rem(3px)
+          top auto
+          right 0

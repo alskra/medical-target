@@ -1,0 +1,9 @@
+include ../menu/menu
+
+mixin aside-slideout()
+  aside.-aside-slideout&attributes(attributes)
+    form.-form-search(action='')
+      .__hidden
+        input.__field(type='search' placeholder='Поиск')
+      button.__btn.glyphicon.glyphicon-search.hidden-xs.hidden-sm(type='button')
+    +menu(menuList)

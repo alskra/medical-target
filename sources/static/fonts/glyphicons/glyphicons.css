@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "glyphicons";
+  src: url('../fonts/glyphicons/glyphicons.eot');
+  src: url('../fonts/glyphicons/glyphicons.eot?#iefix') format('eot'),
+  url('../fonts/glyphicons/glyphicons.woff2') format('woff2'),
+  url('../fonts/glyphicons/glyphicons.woff') format('woff'),
+  url('../fonts/glyphicons/glyphicons.ttf') format('truetype'),
+  url('../fonts/glyphicons/glyphicons.svg#glyphicons') format('svg');
+}
+
+.glyphicon:before {
+  font-family: "glyphicons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.glyphicon-close-2:before {
+  content: "\E001";
+}
+
+.glyphicon-close:before {
+  content: "\E002";
+}
+
+.glyphicon-fb:before {
+  content: "\E003";
+}
+
+.glyphicon-gp:before {
+  content: "\E004";
+}
+
+.glyphicon-heart:before {
+  content: "\E005";
+}
+
+.glyphicon-ins:before {
+  content: "\E006";
+}
+
+.glyphicon-mail:before {
+  content: "\E007";
+}
+
+.glyphicon-nav:before {
+  content: "\E008";
+}
+
+.glyphicon-plus:before {
+  content: "\E009";
+}
+
+.glyphicon-search:before {
+  content: "\E00A";
+}
+
+.glyphicon-sister:before {
+  content: "\E00B";
+}
+
+.glyphicon-stat:before {
+  content: "\E00C";
+}
+
+.glyphicon-tel:before {
+  content: "\E00D";
+}
+
+.glyphicon-tw:before {
+  content: "\E00E";
+}

@@ -1,0 +1,19 @@
+.form-order
+  max-width rem(510px)
+  max-height calc(100vh - 3.75rem - 1.875rem*2)
+  overflow-y auto
+  .text-field
+    &_textarea
+      min-height rem(65px)
+  .btn
+    width 100%
+
+  @media (min-width $screen-sm-min)
+    max-height none
+
+  @media (min-width $screen-md-min)
+    .text-field
+      &_textarea
+        min-height rem(150px)
+    .btn
+      width auto

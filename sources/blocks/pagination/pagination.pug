@@ -1,0 +1,9 @@
+mixin pagination()
+  .-pagination&attributes(attributes)
+    +a().__item.btn <<
+    +a().__item.btn 1
+    span.__item._current.btn 2
+    +a().__item.btn 3
+    span.__item._hellip.btn &hellip;
+    +a().__item.btn 9
+    +a().__item.btn >>

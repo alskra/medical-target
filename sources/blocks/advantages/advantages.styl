@@ -1,0 +1,88 @@
+.advantages
+  font-family 'zero-width'
+  margin 0 (- $grid-gutter-width/2)
+
+  &__item
+    display inline-block
+    vertical-align top
+    font-family $font-family-base
+    text-align center
+    color #090e12
+    font-size rem-calc(18)
+    width unquote('calc(20% - ' + $grid-gutter-width + ')')
+    margin 0 ($grid-gutter-width/2) rem-calc(75)
+
+  &__item-icon
+    display block
+    color $green-1
+    font-weight 700
+    font-size rem-calc(60)
+    text-align center
+    line-height rem-calc(111)
+    width rem-calc(113)
+    height rem-calc(113)
+    border 1px solid $green-1
+    border-radius 50%
+    margin 0 auto rem-calc(47)
+
+    &_1
+      background inline-img('advantages-1.png') no-repeat 50% 50%
+
+    &_2
+      background inline-img('advantages-2.png') no-repeat 50% 50%
+
+    &_3
+      background inline-img('advantages-3.png') no-repeat 50% 50%
+
+    &_4
+      &:before
+        content '5'
+
+    &_5
+      background inline-img('advantages-5.png') no-repeat 50% 50%
+
+  &_1
+    & {$p}__item
+      position relative
+      margin-bottom rem-calc(100)
+      &:not(:last-child)
+        &:after
+          content ''
+          width 30px
+          height 21px
+          position absolute
+          top rem-calc(107/2)
+          left 100%
+          margin -15px 0
+          background inline-img('adv-arr-double-angle.png') no-repeat 0 0/cover
+
+    & {$p}__item-icon
+      color #00b7f4
+      font-size rem-calc(36)
+      text-align center
+      line-height rem-calc(105)
+      width rem-calc(107)
+      height rem-calc(107)
+      border 1px solid #00b7f4
+      background none
+
+      &_1
+        &:before
+          content '1'
+
+      &_2
+        &:before
+          content '2'
+
+      &_3
+        &:before
+          content '3'
+
+      &_4
+        &:before
+          content '4'
+
+      &_5
+        &:before
+          content '5'
+

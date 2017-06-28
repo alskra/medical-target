@@ -1,0 +1,28 @@
+.social-networks
+  text-align center
+  margin 0 rem(-12px) rem(-24px)
+  &__item
+    display inline-flex
+    vertical-align top
+    justify-content center
+    align-items center
+    color #888
+    text-decoration none
+    margin 0 rem(12px) rem(24px)
+    font-size rem(11px)
+    line-height 1em
+    square rem(40px)
+    border 2px solid
+    border-radius 50%
+    &.glyphicon-fb
+      font-size rem(13px)
+    &.glyphicon-ins
+      font-size rem(12px)
+    &:hover, &:focus
+      color white
+      text-decoration none
+      border-color $blue-1
+      background $blue-1
+
+  @media (min-width $screen-sm-min)
+    text-align left

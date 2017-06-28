@@ -1,0 +1,51 @@
+{
+  "name": "medical-target",
+  "version": "1.0.0",
+  "description": "Medical Target",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "goodshare.js": ""
+  },
+  "devDependencies": {
+    "autoprefixer-stylus": "",
+    "browser-sync": "",
+    "del": "",
+    "emitty": "",
+    "fs": "",
+    "get-classes-from-html": "",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-cached": "",
+    "gulp-clean-css": "",
+    "gulp-concat": "",
+    "gulp-debug": "",
+    "gulp-filter": "",
+    "gulp-html-beautify": "",
+    "gulp-iconfont": "",
+    "gulp-iconfont-css": "",
+    "gulp-if": "",
+    "gulp-imagemin": "",
+    "gulp-load-plugins": "",
+    "gulp-newer": "",
+    "gulp-notify": "",
+    "gulp-posthtml": "",
+    "gulp-pug": "",
+    "gulp-real-favicon": "",
+    "gulp-remember": "",
+    "gulp-rename": "",
+    "gulp-sourcemaps": "",
+    "gulp-stylus": "",
+    "gulp-uglify": "",
+    "gulp-zip": "",
+    "imagemin-jpegoptim": "",
+    "map-stream": "",
+    "path": "",
+    "posthtml-bem": "",
+    "posthtml-bem-sugar": "",
+    "stream-combiner2": ""
+  }
+}

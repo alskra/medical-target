@@ -1,0 +1,21 @@
+mixin header()
+  header.-header&attributes(attributes)
+    .__inner-top
+      .-container-fluid
+        button.-header.__toggle-menu.glyphicon.glyphicon-nav.hidden-md.hidden-lg
+        +a(pages.home.url).-header.__logo(title='Medical Target')
+          block header__logo
+            img.__logo-img(src='static/img/general/header-logo-medical.svg' alt='Medical Target')
+            | Medical Target
+        .-header.__contacts.glyphicon.glyphicon-tel.hidden-xs.hidden-sm
+          +a('tel:88003003030') 8.800.300.3030
+          br
+          small Звоните с 9:00 до 18:00
+        .-header.__contacts.glyphicon.glyphicon-mail.hidden-xs.hidden-sm
+          +a('mail:medicaltarget@gmail.com') medicaltarget@gmail.com
+          br
+          small Звоните с 9:00 до 18:00
+        +a('feedback.html').-header.__btn-feedback.btn.btn_1.hidden-xs(data-fancybox='feedback?v=0' data-type='ajax') Напишите нам
+    .__inner-bottom.hidden-xs.hidden-sm
+      .-container-fluid
+    block

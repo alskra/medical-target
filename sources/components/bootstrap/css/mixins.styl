@@ -1,0 +1,76 @@
+// Mixins
+// --------------------------------------------------
+vendors ?= official
+
+/*percentage($n)
+  if $n == 0
+    0
+  else
+    unit($n * 100, "%")*/
+
+url(str)
+  if current-property && (current-property[0] == 'background' || current-property[0] == 'background-image' || current-property[0] == 'content')
+    str = '../img/general/' + str
+  unquote('url("' + str + '")')
+
+inline-img(str)
+  embedurl('build/static/img/general/' + str)
+
+inline-svg(str)
+  embedurl('build/static/img/general/' + str, 'utf8')
+
+$p = '^[0]'
+
+r = $p
+
+disabled()
+  cursor $cursor-disabled
+  opacity 0.5
+  box-shadow none
+  pointer-events none
+
+line-clamp($n)
+  display -webkit-box
+  -webkit-box-orient vertical
+  -webkit-line-clamp $n
+  line-clamp $n
+
+
+// Utilities
+
+@import "sources/components/bootstrap/css/mixins/hide-text"
+//@import "sources/components/bootstrap/css/mixins/opacity"
+//@import "sources/components/bootstrap/css/mixins/image"
+//@import "sources/components/bootstrap/css/mixins/labels"
+//@import "sources/components/bootstrap/css/mixins/reset-filter"
+//@import "sources/components/bootstrap/css/mixins/resize"
+@import "sources/components/bootstrap/css/mixins/responsive-visibility"
+@import "sources/components/bootstrap/css/mixins/size"
+@import "sources/components/bootstrap/css/mixins/tab-focus"
+@import "sources/components/bootstrap/css/mixins/reset-text"
+@import "sources/components/bootstrap/css/mixins/text-emphasis"
+@import "sources/components/bootstrap/css/mixins/text-overflow"
+//@import "./sources/components/bootstrap/css/mixins/vendor-prefixes"
+
+// Components
+//@import "sources/components/bootstrap/css/mixins/alerts"
+//@import "sources/components/bootstrap/css/mixins/buttons"
+//@import "sources/components/bootstrap/css/mixins/panels"
+//@import "sources/components/bootstrap/css/mixins/pagination"
+//@import "sources/components/bootstrap/css/mixins/list-group"
+//@import "sources/components/bootstrap/css/mixins/nav-divider"
+//@import "sources/components/bootstrap/css/mixins/forms"
+//@import "sources/components/bootstrap/css/mixins/progress-bar"
+//@import "sources/components/bootstrap/css/mixins/table-row"
+
+// Skins
+//@import "sources/components/bootstrap/css/mixins/background-variant"
+@import "sources/components/bootstrap/css/mixins/border-radius"
+//@import "sources/components/bootstrap/css/mixins/gradients"
+
+// Layout
+@import "sources/components/bootstrap/css/mixins/clearfix"
+@import "sources/components/bootstrap/css/mixins/center-block"
+//@import "sources/components/bootstrap/css/mixins/nav-vertical-align"
+@import "sources/components/bootstrap/css/mixins/grid-framework"
+@import "sources/components/bootstrap/css/mixins/grid"

@@ -1,0 +1,10 @@
+[
+  "sources/components/modernizr/modernizr-custom.js",
+  "bower_components/jquery/dist/jquery.js",
+  "bower_components/jquery-touch-events/src/jquery.mobile-events.js",
+  "bower_components/fancybox/dist/jquery.fancybox.js",
+  "sources/components/slick-carousel/add-on/slick.js",
+  "bower_components/slideout.js/dist/slideout.js",
+  "bower_components/jquery-mask-plugin/dist/jquery.mask.js",
+  "bower_components/jquery-validation/dist/jquery.validate.js"
+]

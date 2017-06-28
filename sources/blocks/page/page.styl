@@ -1,0 +1,111 @@
+.page
+  display flex
+
+  &_home-project
+    display block
+    & {$p}__header
+      background #2a333c
+      margin 0 0 20px
+      padding 30px 0
+    & {$p}__title
+      color white
+      margin 0
+      small
+        color inherit
+
+@keyframes loading
+  100%
+    transform rotate(360deg)
+
+.loading
+  &:before
+    content ''
+    position absolute
+    width 30px
+    height 30px
+    margin -15px
+    border 3px solid $blue-1
+    border-right-color transparent
+    border-radius 50%
+    top 50%
+    left 50%
+    right 50%
+    bottom 50%
+    animation loading 1.2s linear infinite
+    z-index $zindex-navbar
+
+//Fancybox
+.fancybox-bg
+  background white
+
+.fancybox-inner
+  top 3.75rem
+
+  @media (min-width $screen-sm-min)
+    top 0
+
+.fancybox-slide
+  white-space nowrap
+  > *
+    white-space normal
+    width 100%
+    background-color white
+    box-shadow 0 5px 29px rgba(0, 0, 0, 0.12)
+    margin $grid-gutter-width 0
+
+    @media (min-width $screen-sm-min)
+      width calc(100% - 4rem*2)
+      margin $grid-gutter-width 0
+
+.fancybox-close-small
+  display inline-block
+  color white
+  font-size rem(27px)
+  width 3.75rem
+  height 3.75rem
+  background $blue-1
+  transition $transition-base
+  position fixed
+  top 0
+  right 0
+  z-index 99995
+  &:after
+    content normal
+  &:hover, &:focus
+    background-color $black-1
+
+.fancybox-arrow
+  &:after
+    background-color $black-1
+  .fancybox-show-nav &
+    opacity 1
+
+//Slideout
+.slideout-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 260px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+

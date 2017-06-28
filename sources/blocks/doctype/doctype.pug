@@ -1,0 +1,33 @@
+include ../../helpers/variables
+include ../../helpers/mixins
+
+mixin doctype(title)
+  doctype html
+  html(class="no-js" lang="ru")
+    head
+      meta(charset="utf-8")
+      title!= title ? title + ' — ' + package.description : package.description
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+      //-meta(name="viewport" content="width=1024")
+      // Favicons
+      != faviconCode
+      // CSS
+      if isDevelopment
+        link(href="static/css/components.css" rel="stylesheet" media="all")
+        link(href="static/css/blocks.css" rel="stylesheet" media="all")
+      else
+        link(href="static/css/main.min.css" rel="stylesheet" media="all")
+      // JS Inline
+      script
+        include ../../components/img-object-fit/img-object-fit.min.js
+    body.-page&attributes(attributes)
+      block
+      // JS
+      //- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4')
+      if isDevelopment
+        script(src="static/js/components.js")
+        script(src="static/js/blocks.js")
+      else
+        script(src="static/js/main.min.js" async)
+      //-include ../../helpers/svg.pug

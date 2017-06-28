@@ -1,0 +1,33 @@
+mixin countdown()
+  .-countdown&attributes(attributes)
+    .__item._days
+      <svg class="countdown__svg" viewPort="0 0 114 114" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="countdown__fill" r="55" cx="57" cy="57" fill="transparent" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+      <circle class="countdown__bar" r="55" cx="57" cy="57" fill="transparent" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+      </svg>
+      strong.__digit
+      | дней
+    //-.__delimiter :
+    .__item._hours
+      <svg class="countdown__svg" viewPort="0 0 114 114" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="countdown__fill" r="55" cx="57" cy="57" fill="transparent" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+      <circle class="countdown__bar" r="55" cx="57" cy="57" fill="transparent" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+      </svg>
+      strong.__digit
+      | часов
+    //-.__delimiter :
+    .__item._minutes
+      <svg class="countdown__svg" viewPort="0 0 114 114" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="countdown__fill" r="55" cx="57" cy="57" fill="transparent" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+      <circle class="countdown__bar" r="55" cx="57" cy="57" fill="transparent" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+      </svg>
+      strong.__digit
+      | минут
+    //-.__delimiter :
+    .__item._seconds
+      <svg class="countdown__svg" viewPort="0 0 114 114" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="countdown__fill" r="55" cx="57" cy="57" fill="transparent" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+      <circle class="countdown__bar" r="55" cx="57" cy="57" fill="transparent" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+      </svg>
+      strong.__digit
+      | секунд

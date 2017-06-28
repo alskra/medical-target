@@ -1,0 +1,57 @@
+.text-field
+  display inline-block
+  vertical-align top
+  color $text-color
+  text-align left
+  height rem(65px)
+  padding 0 rem(18px)
+  background-color #f2f2f2
+  border 2px solid transparent
+  transition $transition-base
+  &::placeholder
+    color #9e9e9e
+  &,
+  &:active,
+  &.active
+    &:focus,
+    &.focus,
+    &.ik_select_link_focus
+      outline 0
+      border-color $blue-1
+      &~.form-label__text
+        font-size 0.75rem
+        line-height 2em
+  &:active,
+  &.active
+    outline 0
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] &
+    disabled()
+
+  &.required
+    &~.form-label__text
+      &:after
+        content ' *'
+        color $blue-1
+
+  &.error
+    border-color $red-1
+
+  &_textarea
+    resize vertical
+    overflow-y auto
+    min-height rem(150px)
+    padding-top rem(15px)
+    padding-bottom rem(15px)
+
+  &_width_100
+    display block
+    width 100%
+
+  &_has-val
+    &~.form-label__text
+      font-size 0.75rem
+      line-height 2em
+
+@import "sources/blocks/form-msg/form-msg.styl"

@@ -1,0 +1,61 @@
+.recomend-item
+  display table
+  table-layout fixed
+  width 100%
+  font-weight 300
+  margin-bottom rem-calc(40)
+  &:nth-child(odd)
+    & {$p}__col_1
+      padding-right rem-calc(50)
+  &:nth-child(even)
+    & {$p}__col_1
+      padding-left rem-calc(50)
+
+    & {$p}__col_2
+      text-align right
+  p
+    margin 0
+
+  &__col
+    display table-cell
+
+    &_1
+      vertical-align top
+      width rem-calc(113) + rem-calc(50)
+
+    &_2
+      vertical-align middle
+
+  &__icon
+    text-align center
+    line-height rem-calc(111)
+    square rem-calc(113)
+    border 1px solid #ff9600
+    border-radius 50%
+
+    &_1
+      background inline-img('rec-icon-1.png') no-repeat 50% 46%/54px auto
+
+    &_2
+      background inline-img('rec-icon-2.png') no-repeat 45% 54%/auto auto
+
+    &_3
+      background inline-img('rec-icon-3.png') no-repeat 44% 54%/auto auto
+
+    &_4
+      background inline-img('rec-icon-4.png') no-repeat 45% 54%/auto auto
+
+    &_5
+      background inline-img('rec-icon-5.png') no-repeat 54% 50%/auto auto
+
+    &_6
+      background inline-img('rec-icon-6.png') no-repeat 54% 54%/auto auto
+
+  &__content
+    overflow hidden
+
+  &__title
+    color black
+    font-size rem-calc(24)
+    font-weight 400
+    margin 0 0 0.6em
