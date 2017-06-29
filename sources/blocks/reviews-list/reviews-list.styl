@@ -1,0 +1,51 @@
+.reviews-list
+  p
+    display inline
+
+  &__item
+    text-align center
+    margin 0 0 rem(40rem)
+
+  &__text
+    overflow hidden
+    line-height ($line-height-base)em
+    max-height ($line-height-base)em*4
+    line-clamp 4
+    margin 0 rem(15rem) rem(27rem)
+
+  &__footer
+    overflow hidden
+    margin 0 rem(10rem)
+
+  &__icon
+    &_header
+      color #dfdfdf
+      font-size rem(42px)
+      line-height 1em
+      margin-bottom rem(20px)
+
+    &_footer
+      float left
+      color white
+      font-size rem(32px)
+      line-height rem(68px)
+      text-align center
+      square rem(68px)
+      background-color $blue-1
+      border-radius 50%
+      margin 0 rem(20px) 0 0
+
+  &__name
+    font-size rem(20px)
+    text-overflow ellipsis
+    margin rem(8px) 0 rem(5px)
+
+  &__place
+    color #9e9e9e
+    font-size rem(15px)
+    text-overflow ellipsis
+    text-transform uppercase
+
+  @media (min-width $screen-sm-min)
+    &__item
+      text-align left

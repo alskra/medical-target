@@ -1,10 +1,115 @@
-mixin slider-main()
-  .-slider-main.slick-slider&attributes(attributes)
-    .__item.slick-slide.loading.loading_before
-      img.__item-img(data-lazy='static/img/content/slider-main/1024x432/slide-1.jpg'
+include ../countdown/countdown
+
+-
+  var sliderMainMedical = [
+  {
+  title: 'Центр превентивной медицины',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.',
+  articles: [
+  {
+  icon: 'glyphicon-stat',
+  title: 'Круглосуточные стационары',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  },
+  {
+  icon: 'glyphicon-sister',
+  title: 'Вызов врача на дом',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  },
+  {
+  icon: 'glyphicon-heart',
+  title: 'Экстренная хирургическая помощь',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  }
+  ]
+  },
+  {
+  title: 'При оформлении услуги скидка 50%',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  },
+  {
+  title: 'При оформлении услуги скидка 50%',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  }
+  ]
+
+mixin slider-main(sliderMain)
+  .-slider-main.slick-slider(data-slick='{"autoplay": true, "autoplaySpeed": 7000}' data-slideout-ignore)&attributes(attributes)
+    .__item.slick-slide.loading
+      img.__img(data-lazy=`${paths.imgContent}/slider-main/1920/slide-1.jpg`
+      data-lazy-srcset=`${paths.imgContent}/slider-main/1366/slide-1.jpg 1366w, ${paths.imgContent}/slider-main/1920/slide-1.jpg 1920w, ${paths.imgContent}/slider-main/4096/slide-1.jpg 4096w`
+      sizes='100vw'
       alt='' data-object-fit='cover' onload='objectFit(this)')
-      .__item-content
-        .__item-section Мода
-        h1.__item-text.
-          Как стать привлекательнее: советы
-        +a(pages.article_1.url).__btn.btn Читать статью
+      .-container-fluid
+        .-row
+          .-col-sm-10.col-md-8.col-lg-6
+            .-slider-main.__content
+              h1.__title !{sliderMain[0].title}
+              .__text.hidden-sm
+                p !{sliderMain[0].text}
+              article.__article.hidden-xs
+                .__article-icon.glyphicon(class=sliderMain[0].articles[0].icon)
+                h2.__article-title !{sliderMain[0].articles[0].title}
+                .__article-text
+                  p !{sliderMain[0].articles[0].text}
+              article.__article.hidden-xs
+                .__article-icon.glyphicon(class=sliderMain[0].articles[1].icon)
+                h2.__article-title !{sliderMain[0].articles[1].title}
+                .__article-text
+                  p !{sliderMain[0].articles[1].text}
+              article.__article.hidden-xs
+                .__article-icon.glyphicon(class=sliderMain[0].articles[2].icon)
+                h2.__article-title !{sliderMain[0].articles[2].title}
+                .__article-text
+                  p !{sliderMain[0].articles[2].text}
+              +a(popups.feedback.url).-btn._2.hidden-sm.hidden-md.hidden-lg(data-fancybox=popups.feedback.url.split('.')[0]
+              data-options=`${config.fancybox.ajaxNoNav}`) Напишите нам
+    .__item.slick-slide.loading
+      img.__img(data-lazy=`${paths.imgContent}/slider-main/1920/slide-1.jpg`
+      data-lazy-srcset=`${paths.imgContent}/slider-main/1366/slide-1.jpg 1366w, ${paths.imgContent}/slider-main/1920/slide-1.jpg 1920w, ${paths.imgContent}/slider-main/4096/slide-1.jpg 4096w`
+      sizes='100vw'
+      alt='' data-object-fit='cover' onload='objectFit(this)')
+      .-container-fluid
+        .-row
+          .-col-sm-10.col-md-8.col-lg-6
+            .-slider-main.__content
+              h2.__title !{sliderMain[1].title}
+              .__text.hidden-sm
+                p !{sliderMain[1].text}
+              p.-slider-main.__action.hidden-xs: strong.
+                Торопитесь! До конца акции осталось:
+              +countdown().hidden-xs(data-time='1514667600000')
+              +a().-btn._2 Получить скидку
+    .__item.slick-slide.loading
+      img.__img(data-lazy=`${paths.imgContent}/slider-main/1920/slide-1.jpg`
+      data-lazy-srcset=`${paths.imgContent}/slider-main/1366/slide-1.jpg 1366w, ${paths.imgContent}/slider-main/1920/slide-1.jpg 1920w, ${paths.imgContent}/slider-main/4096/slide-1.jpg 4096w`
+      sizes='100vw'
+      alt='' data-object-fit='cover' onload='objectFit(this)')
+      .-container-fluid
+        .-row
+          .-col-sm-10.col-md-8.col-lg-6
+            .-slider-main.__content
+              h2.__title.hidden-xs !{sliderMain[2].title}
+              .__text.hidden-xs.hidden-sm
+                p !{sliderMain[2].text}
+              form.-form-order
+                .-form-row
+                  label.-form-label
+                    input.-text-field.required(type='text' name='name' required data-msg-required='Введите имя')
+                    span.__text Ваше имя
+                .-form-row
+                  label.-form-label
+                    input.-text-field.required(type='email' name='email' required data-msg-required='Введите e-mail' data-msg-email='Некорректный e-mail')
+                    span.__text Ваш e-mail
+                .-form-row
+                  label.-form-label
+                    textarea.-text-field._textarea.required(name='msg' required data-msg-required='Введите сообщение')
+                    span.__text Какая услуга вам необходима?
+                .-form-row
+                  button.-btn._2(type='submit') Оставить заявку

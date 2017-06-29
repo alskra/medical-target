@@ -21,10 +21,9 @@ include ../blocks/doctype/doctype
         .-col-sm-4
           h2 Popups
           ol.-list-pages
-            each modal, index in modals
+            each popup, index in popups
               li
-                +a(modal.url)(data-toggle='modal-ajax') #{modal.title} #[small (#{modal.url})]
-            //-li #[+a()(data-fancybox='privacy-policy' data-type='ajax' data-src='popups/privacy-policy.html') Политика конфиденциальности]
+                +a(popup.url)(data-fancybox data-type='ajax') #{popup.title} #[small (#{popup.url})]
 
   footer.__footer
     div &nbsp;

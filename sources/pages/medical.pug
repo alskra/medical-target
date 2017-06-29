@@ -1,0 +1,106 @@
+include ../blocks/doctype/doctype
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+include ../blocks/aside-slideout/aside-slideout
+include ../blocks/slider-main/slider-main
+include ../blocks/services-list/services-list
+include ../blocks/advantages-list/advantages-list
+include ../blocks/personnel-list/personnel-list
+include ../blocks/reviews-list/reviews-list
+include ../blocks/news-list/news-list
+
+block variables
+  -
+    var pageTitle = pages.medical.title,
+    pageUrls = [pages.medical.url],
+    suffix = 'medical';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+
++doctype(pages.medical.title)
+  +aside-slideout().slideout-menu.slideout-menu-left
+  .-wrapper.slideout-panel.slideout-panel-left
+    +header()
+    +content()
+      block slider-main
+        +slider-main(sliderMainMedical)
+      section.-section._services(id='services')
+        header.__header
+          .-container-fluid
+            h2.-section.__title Наши услуги
+            p.-section.__lead
+              block section-services__lead
+                | Центр превентивной медицины
+        .-container-fluid
+          .-collapse-box._services-list
+            block services-list
+              +services-list(servicesListMedical)
+            .text-center.hidden-sm.hidden-md.hidden-lg
+              div &nbsp;
+              div &nbsp;
+              button.-collapse-box.__btn.btn.btn_3(type='button' data-collapse-close='Показать ещё' data-collapse-open='Скрыть')
+      section.-section._about(id='about')
+        header.__header
+          .-container-fluid
+            h2.-section.__title О компании
+            p.-section.__lead
+              block section-about__lead
+                | Центр превентивной медицины
+        .-container-fluid
+          .-row
+            .-col-md-4._1.hidden-xs.hidden-sm
+              block section-about__img
+                img.img-responsive(src=`${paths.imgContent}/Fotolia_50416825_Subscription_Monthly_M.jpg` alt='')
+            .-col-xs-12.col-md-8
+              .-section.__text
+                block section-about__text
+                  p.
+                    Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.
+                    Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+              .-section.__btns
+                +a().-btn._3 Узнайте больше
+                +a(popups.feedback.url).-btn._3(data-fancybox=popups.feedback.url.split('.')[0]
+                data-options=config.fancybox.ajaxNoNav) Напишите нам
+              block advantages-list
+                +advantages-list(advantagesListMedical)
+      section.-section._personnel(id='personnel')
+        header.__header
+          .-container-fluid
+            h2.-section.__title Специалисты
+            p.-section.__lead
+              block section-personnel__lead
+                | Центр превентивной медицины
+        .-container-fluid
+          .-collapse-box._personnel-list
+            block personnel-list
+              +personnel-list(personnelListMedical)
+            .text-center.hidden-sm.hidden-md.hidden-lg
+              div &nbsp;
+              div &nbsp;
+              button.-collapse-box.__btn.btn.btn_3(type='button' data-collapse-close='Показать ещё' data-collapse-open='Скрыть')
+      section.-section._reviews(id='reviews')
+        header.__header
+          .-container-fluid
+            h2.-section.__title Отзывы
+            p.-section.__lead
+              block section-reviews__lead
+                | Центр превентивной медицины
+        .-container-fluid
+          block reviews-list
+            +reviews-list(reviewsListMedical)(data-slick='{"autoplay": true, "autoplaySpeed": 10000}' data-slideout-ignore)
+      section.-section._news(id='news')
+        header.__header
+          .-container-fluid
+            h2.-section.__title Новости
+            p.-section.__lead
+              block section-news__lead
+                | Центр превентивной медицины
+        .-container-fluid
+          block news-list
+            +news-list(newsListMedical)
+            .text-center
+              div &nbsp;
+              div &nbsp;
+              +a().-btn._3 Показать ещё
+    +footer()

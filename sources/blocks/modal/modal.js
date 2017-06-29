@@ -13,11 +13,11 @@ $(function () {
             smallBtn   : '<button data-fancybox-close class="fancybox-close-small glyphicon glyphicon-close-2 hide" title="{{CLOSE}}"></button>'
         },
         onInit: function () {
-            $('<button data-fancybox-close class="fancybox-close-small glyphicon glyphicon-close-2" title="Close"></button>')
+            $('<div class="fancybox-inner__header"><button data-fancybox-close class="fancybox-close-small glyphicon glyphicon-close-2" title="Close"></button></div>')
                 .prependTo('.fancybox-inner');
         },
         beforeClose: function () {
-            $('.fancybox-close-small').fadeOut(366);
+            //$('.fancybox-close-small').css('transition', '').fadeOut(366);
         }
     });
 });

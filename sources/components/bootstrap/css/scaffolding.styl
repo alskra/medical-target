@@ -34,6 +34,19 @@ body
   background $blue-1
   color white
 
+.no-touchevents.webkit
+  ::-webkit-scrollbar
+    width 0.9rem
+    height 0.9rem
+    background transparent
+
+  ::-webkit-scrollbar-track
+    background white
+
+  ::-webkit-scrollbar-thumb
+    background #9e9e9e
+    transition $transition-base
+
 :focus
   outline 0
 
@@ -59,8 +72,8 @@ a
     color $link-hover-color
     text-decoration $link-hover-decoration
 
-  //&:focus
-    //tab-focus()
+//&:focus
+  //tab-focus()
 
 
 // Figures

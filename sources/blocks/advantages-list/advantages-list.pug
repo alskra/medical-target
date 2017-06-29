@@ -1,0 +1,34 @@
+-
+  var advantagesListMedical = [
+  {
+  icon: 'tablets',
+  title: 'Лечение заболеваний',
+  description: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.'
+  },
+  {
+  icon: 'tel-med',
+  title: 'Консультация врача',
+  description: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.'
+  },
+  {
+  icon: 'folder-med',
+  title: 'Индивидуальный подход',
+  description: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.'
+  },
+  {
+  icon: 'diagnos',
+  title: 'Анализы и диагностика',
+  description: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.'
+  }
+  ]
+
+mixin advantages-list(advantagesList)
+  .-advantages-list&attributes(attributes)
+    .__row.row
+      each advantage, index in advantagesList
+        .__col.col-xs-12.col-sm-6
+          article.__item
+            .__item-icon.glyphicon(class=`glyphicon-${advantage.icon}`)
+            h3.__item-title #{advantage.title}
+            .__description
+              p #{advantage.description}

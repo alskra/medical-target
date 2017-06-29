@@ -1,4 +1,11 @@
-extends index
+extends medical
 
-block header__logo
-  | ewrewrwer
+block variables
+  -
+    var pageTitle = pages.beauty.title,
+    pageUrls = [pages.beauty.url],
+    suffix = 'beauty';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block section-services__lead
+  | 123

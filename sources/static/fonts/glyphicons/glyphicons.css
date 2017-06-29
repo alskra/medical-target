@@ -31,50 +31,74 @@
   content: "\E002";
 }
 
-.glyphicon-fb:before {
+.glyphicon-comments:before {
   content: "\E003";
 }
 
-.glyphicon-gp:before {
+.glyphicon-diagnos:before {
   content: "\E004";
 }
 
-.glyphicon-heart:before {
+.glyphicon-fb:before {
   content: "\E005";
 }
 
-.glyphicon-ins:before {
+.glyphicon-folder-med:before {
   content: "\E006";
 }
 
-.glyphicon-mail:before {
+.glyphicon-gp:before {
   content: "\E007";
 }
 
-.glyphicon-nav:before {
+.glyphicon-heart:before {
   content: "\E008";
 }
 
-.glyphicon-plus:before {
+.glyphicon-ins:before {
   content: "\E009";
 }
 
-.glyphicon-search:before {
+.glyphicon-mail:before {
   content: "\E00A";
 }
 
-.glyphicon-sister:before {
+.glyphicon-nav:before {
   content: "\E00B";
 }
 
-.glyphicon-stat:before {
+.glyphicon-plus:before {
   content: "\E00C";
 }
 
-.glyphicon-tel:before {
+.glyphicon-search:before {
   content: "\E00D";
 }
 
-.glyphicon-tw:before {
+.glyphicon-sister:before {
   content: "\E00E";
+}
+
+.glyphicon-stat:before {
+  content: "\E00F";
+}
+
+.glyphicon-tablets:before {
+  content: "\E010";
+}
+
+.glyphicon-tel-med:before {
+  content: "\E011";
+}
+
+.glyphicon-tel:before {
+  content: "\E012";
+}
+
+.glyphicon-tw:before {
+  content: "\E013";
+}
+
+.glyphicon-user:before {
+  content: "\E014";
 }

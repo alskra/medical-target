@@ -1,0 +1,33 @@
+@keyframes animateCollapseBox
+  from
+    opacity 0
+  to
+    opacity 1
+
+.collapse-box
+  overflow hidden
+
+  &__btn
+    &:after
+      content attr(data-collapse-close)
+
+  &_services-list .services-list__col,
+  &_personnel-list .personnel-list__col
+    display none
+    &:nth-child(1), &:nth-child(2)
+      display block
+
+  &_opened
+    & .services-list__col, .personnel-list__col
+      display block
+      animation animateCollapseBox 0.5s linear
+      &:nth-child(1), &:nth-child(2)
+        animation none
+    & {r}__btn
+      &:after
+        content attr(data-collapse-open)
+
+  @media (min-width $screen-sm-min)
+    &_services-list .services-list__col,
+    &_personnel-list .personnel-list__col
+      display block

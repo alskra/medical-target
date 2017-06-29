@@ -1,12 +1,23 @@
 -
   var voidHref = 'javascript:;';
 
+  var paths = {
+  imgGeneral: 'static/img/general',
+  imgContent: 'static/img/content'
+  }
+
   var pages = {
-    home: {title: 'List of pages', url: 'home.html'},
-    index: {title: 'Медицина', url: 'index.html'},
-    beauty: {title: 'Салон красоты', url: 'beauty.html'},
+  home: {title: 'List of pages', url: 'home.html'},
+  medical: {title: 'Medical Target', url: 'index.html'},
+  beauty: {title: 'Beauty Target', url: 'beauty.html'},
   };
 
-  var modals = {
-
+  var popups = {
+  feedback: {title: 'Напишите нам', url: 'popups/feedback.html'},
   };
+
+  var config = {
+  fancybox: {
+  ajaxNoNav: '{"type": "ajax", "keyboard": false, "arrows": false, "touch": false}'
+  }
+  }

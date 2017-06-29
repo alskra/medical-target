@@ -1,0 +1,47 @@
+-
+  var servicesListMedical = [
+  {
+  img: 'Fotolia_103968342_Subscription_Monthly_M.jpg',
+  title: 'Лечение',
+  description: 'Наш формат - универсальная семейная клиника, в которой взрослым и ' +
+  'детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  },
+  {
+  img: 'Fotolia_98084818_Subscription_Monthly_M.jpg',
+  title: 'Диагностика',
+  description: 'Наш формат - универсальная семейная клиника, в которой взрослым и ' +
+  'детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  },
+  {
+  img: 'Fotolia_78678976_Subscription_Monthly_M.jpg',
+  title: 'Скорая помощь',
+  description: 'Наш формат - универсальная семейная клиника, в которой взрослым и ' +
+  'детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  },
+  {
+  img: 'Fotolia_82745345_Subscription_Monthly_M-(2).jpg',
+  title: 'Медицинские справки',
+  description: 'Наш формат - универсальная семейная клиника, в которой взрослым и ' +
+  'детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  }
+  ]
+
+mixin services-list(servicesList)
+  .-services-list&attributes(attributes)
+    .__row.row
+      each service, index in servicesList
+        .__col.col-xs-12.col-lg-3
+          article.-service-item
+            +a(`${suffix}/service-${index + 1}.html`).__img-wrap.glyphicon.glyphicon-plus(data-fancybox='service?1' data-type='ajax')
+              img.__img(src=`${paths.imgContent}/services-list/300x188/${service.img}`
+              srcset=`${paths.imgContent}/services-list/300x188/${service.img} 1x, ${paths.imgContent}/services-list/600x376/${service.img} 1.25x`
+              alt='' data-object-fit='cover' onload='objectFit(this)')
+            h3.__title
+              +a(`${suffix}/service-${index + 1}.html`).__title-link(data-fancybox='service?2' data-type='ajax') #{service.title}
+            .__description
+              p #{service.description}
+      // Spacers
+      .__col.col-xs-12.col-lg-3
+      .__col.col-xs-12.col-lg-3
+      .__col.col-xs-12.col-lg-3
+      .__col.col-xs-12.col-lg-3

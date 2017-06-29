@@ -9,7 +9,7 @@ mixin footer()
           section.-footer.__section
             h4.__title Информация
             p.
-              &copy;&nbsp;2016&mdash;2017 «Medical Target»
+              &copy;&nbsp;2016&mdash;2017 «#{pageTitle}»
             +social-networks()
         .-col-xs-12.col-sm-12.col-md-4.footer__col.footer__col_order_3
           section.-footer.__section._last
@@ -17,7 +17,7 @@ mixin footer()
             p.
               Москва, 2-й Тверской-Ямской переулок, дом 10 (метро "Маяковская")
             p.
-              Телефон: #[a(href='tel:88003003030') 8-800-300-3030] #[br]E-mail: #[a(href='medicaltarget@gmail.com') medicaltarget@gmail.com]
+              Телефон: #[a(href='tel:88003003030') 8-800-300-3030] #[br]E-mail: #[+a(`mailto:${suffix}target@gmail.com`) #{suffix}target@gmail.com]
         .-col-xs-12.col-sm-12.col-md-4.footer__col.footer__col_order_2
           section.-footer.__section
             h4.__title О компании
