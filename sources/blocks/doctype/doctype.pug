@@ -7,8 +7,8 @@ mixin doctype(title)
     head
       meta(charset="utf-8")
       title!= title ? title + ' — ' + package.description : package.description
-      meta(name="description" content="Mer")
-      link(rel="image_src" href=`${paths.imgContent}/Fotolia_50416825_Subscription_Monthly_M.jpg`)
+      meta(name="description" content="Current page description.")
+      link(rel="image_src" href="http://your-site.com/path/to/image.jpg")
       meta(http-equiv="X-UA-Compatible" content="IE=edge")
       meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
       //-meta(name="viewport" content="width=1024")
@@ -26,24 +26,7 @@ mixin doctype(title)
     body.-page&attributes(attributes)
       block
       // JS
-      script.
-        var map;
-        function initMap() {
-            var myLatLng = {lat: 55.752565, lng: 37.614624};
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: myLatLng,
-                scrollwheel:  false
-            });
-
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: ''
-            });
-        }
-      script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap')
+      script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4')
       if isDevelopment
         script(src="static/js/components.js")
         script(src="static/js/blocks.js")

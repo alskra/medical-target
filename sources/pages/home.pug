@@ -23,7 +23,7 @@ include ../blocks/doctype/doctype
           ol.-list-pages
             each popup, index in popups
               li
-                +a(popup.url)(data-fancybox data-type='ajax') #{popup.title} #[small (#{popup.url})]
+                +a()(data-fancybox data-type='ajax' data-src=popup.url data-fancybox--group) #{popup.title} #[small (#{popup.url})]
 
   footer.__footer
     div &nbsp;

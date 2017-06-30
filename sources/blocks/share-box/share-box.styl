@@ -1,34 +1,49 @@
 .share-box
   display flex
   flex-flow row wrap
+  align-items flex-start
+  padding-right rem(24px)
+  position relative
 
   &__item
     display flex
     color inherit
     text-decoration none
-    line-height rem(21px)
-    height rem(20px)
+    font-size rem(11px)
+    line-height 1em
     white-space nowrap
+    transition $transition-base
     margin 0 rem(8px) rem(8px) 0
+    &:nth-child(3) ~ &:not(&_share-btn)
+      transform rotateX(90deg)
+      margin-top rem(-10px)
+      margin-bottom rem(-10px)
     &:hover, &:focus
       color inherit
       text-decoration none
+    &_share-btn
+      color $headings-color
+      font-size rem(19px)
+      padding-bottom rem(1px)
+      position absolute
+      top 0
+      right 0
+      margin 0
 
   &__btn
-    flex none
-    display inline-block
-    vertical-align top
     text-shadow 0 -1px 1px rgba(0, 0, 0, 0.4)
     color white
-    font-size 11px
     font-weight 700
-    height 100%
-    padding 0 4px
-    border-radius 2px
+    padding rem(5px) rem(4px) rem(4px)
+    border-radius rem(2px)
     transition inherit
+    background-color $text-color
     &:before
-      line-height rem(19px)
-      margin-right 4px
+      font-size rem(13px)
+      margin-top rem(-1px)
+      margin-right rem(4px)
+    &:hover, &:focus
+      background-color lighten($text-color, 8%)
     &.glyphicon-facebook
       background-color #405ba3
       &:before
@@ -49,24 +64,26 @@
         background-color lighten(#5e82ac, 8%)
 
   &__counter
-    flex none
-    display inline-block
-    vertical-align top
     color #6a717f
-    font-size 11px
-    height 100%
-    padding 0 5px
+    padding rem(5px) rem(5px) rem(4px)
     background-color #eee
-    border-radius 2px
+    border-radius rem(2px)
     position relative
     transition inherit
-    margin-left 6px
+    margin-left rem(6px)
     &:before
       content ''
-      border-right 6px solid #eee
-      border-top 3px solid transparent
-      border-bottom 3px solid transparent
+      border-right rem(6px) solid #eee
+      border-top rem(3px) solid transparent
+      border-bottom rem(3px) solid transparent
       position absolute
       top 50%
       right 100%
-      margin -3px 0
+      margin rem(-3px) 0
+
+  &_visible_all
+    & {r}__item
+      &:nth-child(3) ~ {r}__item:not({r}__item_share-btn)
+        transform rotateX(0)
+        margin-top 0
+        margin-bottom rem(8px)

@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Medical Target — Medical Target</title>
-  <meta name="description" content="Mer">
-  <link rel="image_src" href="static/img/content/medical/Fotolia_50416825_Subscription_Monthly_M.jpg">
+  <meta name="description" content="Current page description.">
+  <link rel="image_src" href="http://your-site.com/path/to/image.jpg">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <!-- Favicons-->
@@ -731,7 +731,7 @@
         <p class="section__lead">Центр превентивной медицины</p>
       </div>
     </header>
-    <div id="map" class="section__map"></div>
+    <div class="section__map contacts-map" id="map"></div>
     <div class="contacts container-fluid">
       <div class="row">
         <section class="contacts__section col-xs-12 col-md-4">
@@ -800,29 +800,7 @@
   </footer>
   </div>
   <!-- JS-->
-  <script>
-    var map;
-
-    function initMap() {
-      var myLatLng = {
-        lat: 55.752565,
-        lng: 37.614624
-      };
-
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: myLatLng,
-        scrollwheel: false
-      });
-
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: ''
-      });
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&amp;callback=initMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4"></script>
   <script src="static/js/components.js"></script>
   <script src="static/js/blocks.js"></script>
 </body>

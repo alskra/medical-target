@@ -10,4 +10,18 @@ mixin share-box()
     +a().__item(data-social='vkontakte' title='VK')
       span.__btn.glyphicon.glyphicon-vkontakte Like
       span.__counter(data-counter='vkontakte') 0
+    +a().__item(data-social='googleplus' title='Google+')
+      span.__btn.fa.fa-google-plus Like
+      span.__counter(data-counter='googleplus') 0
+    +a().__item(data-social='odnoklassniki' title='Одноклассники')
+      span.__btn.fa.fa-odnoklassniki Like
+      span.__counter(data-counter='odnoklassniki') 0
+    +a().__item(data-social='pinterest' title='Pinterest')
+      span.__btn.fa.fa-pinterest Like
+      span.__counter(data-counter='pinterest') 0
+    +a().__item(data-social='linkedin' title='LinkedIn')
+      span.__btn.fa.fa-linkedin Like
+      span.__counter(data-counter='linkedin') 0
+
+    button.__item._share-btn.btn.glyphicon.glyphicon-share(type='button')
   <script src="https://cdn.jsdelivr.net/jquery.goodshare.js/4/goodshare.min.js"></script>

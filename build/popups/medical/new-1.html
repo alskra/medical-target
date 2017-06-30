@@ -10,8 +10,54 @@
     помогает сохранить здоровье и активность на долгие годы.</p>
   <!-- goodshare.js https://github.com/koddr/goodshare.js/blob/master/README.md-->
   <div class="share-box"><a href="javascript:;" data-social="facebook" title="Facebook" class="share-box__item"><span class="share-box__btn glyphicon glyphicon-facebook">Like</span><span data-counter="facebook" class="share-box__counter">0</span></a><a href="javascript:;" data-social="twitter"
-      title="Twitter" class="share-box__item"><span class="share-box__btn glyphicon glyphicon-twitter">Tweet</span></a><a href="javascript:;" data-social="vkontakte" title="VK" class="share-box__item"><span class="share-box__btn glyphicon glyphicon-vkontakte">Like</span><span data-counter="vkontakte" class="share-box__counter">0</span></a></div>
-  <script
-    src="https://cdn.jsdelivr.net/jquery.goodshare.js/4/goodshare.min.js"></script>
-    <div class="text-center"><a href="javascript:;" class="btn btn_3">Показать комментарии (2)</a></div>
+      title="Twitter" class="share-box__item"><span class="share-box__btn glyphicon glyphicon-twitter">Tweet</span></a><a href="javascript:;" data-social="vkontakte" title="VK" class="share-box__item"><span class="share-box__btn glyphicon glyphicon-vkontakte">Like</span><span data-counter="vkontakte" class="share-box__counter">0</span></a>
+    <a
+      href="javascript:;" data-social="googleplus" title="Google+" class="share-box__item"><span class="share-box__btn fa fa-google-plus">Like</span><span data-counter="googleplus" class="share-box__counter">0</span></a><a href="javascript:;" data-social="odnoklassniki" title="Одноклассники" class="share-box__item"><span class="share-box__btn fa fa-odnoklassniki">Like</span><span data-counter="odnoklassniki" class="share-box__counter">0</span></a>
+      <a
+        href="javascript:;" data-social="pinterest" title="Pinterest" class="share-box__item"><span class="share-box__btn fa fa-pinterest">Like</span><span data-counter="pinterest" class="share-box__counter">0</span></a><a href="javascript:;" data-social="linkedin" title="LinkedIn" class="share-box__item"><span class="share-box__btn fa fa-linkedin">Like</span><span data-counter="linkedin" class="share-box__counter">0</span></a>
+        <button
+          class="share-box__item share-box__item_share-btn btn glyphicon glyphicon-share" type="button"></button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/jquery.goodshare.js/4/goodshare.min.js"></script>
+  <div class="comments-list collapsible">
+    <div class="text-center"><a href="javascript:;" data-toggle="collapsible" class="btn btn_3">Показать комментарии (2)</a></div>
+    <div class="collapsible__inner">
+      <article class="comments-list__item">
+        <header class="comments-list__header">
+          <h3 class="comments-list__title">Наталья Петрова</h3><time datetime="ГГГГ-ММ-ДДTчч:мм:сс±чч:мм" class="comments-list__date">25 сентября 2016&nbsp;&nbsp; 14:23</time></header>
+        <div class="comments-list__content">
+          <p>Хорошо, что рядом с домом находится клиника и там работает знакомая медсестра, которая не только делает мне уколы, но и помогает мне...</p>
+        </div>
+      </article>
+      <article class="comments-list__item">
+        <header class="comments-list__header">
+          <h3 class="comments-list__title">Василий Пупкин</h3><time datetime="ГГГГ-ММ-ДДTчч:мм:сс±чч:мм" class="comments-list__date">24 сентября 2016&nbsp;&nbsp; 14:23</time></header>
+        <div class="comments-list__content">
+          <p>Хорошо, что рядом с домом находится клиника и там работает знакомая медсестра, которая не только делает мне уколы, но и помогает мне...</p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <form action="" class="form-comment">
+    <h3 class="form-comment__title">Оставьте свой комментарий</h3>
+    <div class="form-row"><label class="form-label"><input class="text-field required" type="text" name="name" required="required" data-msg-required="Введите имя"><span class="form-label__text">Ваше имя</span></label></div>
+    <div class="form-row"><label class="form-label"><input class="text-field required" type="email" name="email" required="required" data-msg-required="Введите e-mail" data-msg-email="Некорректный e-mail"><span class="form-label__text">Ваш e-mail</span></label></div>
+    <div class="form-row"><label class="form-label"><textarea class="text-field text-field_textarea required" name="msg" required="required" data-msg-required="Введите сообщение"></textarea><span class="form-label__text">Текст Вашего сообщения</span></label></div>
+    <div class="form-row text-center margin-none-bottom"><button type="submit" class="btn btn_1">Отправить</button></div>
+  </form>
+  <!-- Validate-->
+  <script>
+    $('.form-comment').validate({
+      onkeyup: function(element) {
+        this.element(element);
+      },
+      onfocusout: function(element) {
+        this.element(element);
+      },
+      errorElement: 'div',
+      errorPlacement: function(error, element) {
+        error.addClass('form-msg form-msg_error').insertAfter(element.closest('.text-field, .checkbox, .radio'));
+      }
+    });
+  </script>
 </div>

@@ -3,11 +3,11 @@
     <h1 class="popup__title">Напишите нам</h1>
   </header>
   <div class="form-row"><label class="form-label"><input class="text-field required" type="text" name="name" required="required" data-msg-required="Введите имя"><span class="form-label__text">Ваше имя</span></label></div>
-  <div class="form-row"><label class="form-label"><input class="text-field required" type="tel" name="tel" required="required" minlength="15" data-msg-required="Введите номер телефона" data-msg-minlength="Некорректный номер телефона" data-mask="+7-000-000-00-00"><span class="form-label__text">Ваш номер телефона</span></label></div>
+  <div class="form-row"><label class="form-label"><input class="text-field required" type="tel" name="tel" required="required" minlength="16" data-msg-required="Введите номер телефона" data-msg-minlength="Некорректный номер телефона" data-mask="+7-000-000-00-00"><span class="form-label__text">Ваш номер телефона</span></label></div>
   <div
     class="form-row"><label class="form-label"><input class="text-field required" type="email" name="email" required="required" data-msg-required="Введите e-mail" data-msg-email="Некорректный e-mail"><span class="form-label__text">Ваш e-mail</span></label></div>
     <div class="form-row"><label class="form-label"><textarea class="text-field text-field_textarea required" name="msg" required="required" data-msg-required="Введите сообщение"></textarea><span class="form-label__text">Текст Вашего сообщения</span></label></div>
-    <div class="form-row text-center"><button type="submit" class="btn btn_1">Отправить</button></div>
+    <div class="form-row text-center margin-none-bottom"><button type="submit" class="btn btn_1">Отправить</button></div>
     <!-- Validate-->
     <script>
       $('.form-feedback-2').validate({
