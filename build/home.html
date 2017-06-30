@@ -64,6 +64,29 @@
     <div>&nbsp;</div>
   </footer>
   <!-- JS-->
+  <script>
+    var map;
+
+    function initMap() {
+      var myLatLng = {
+        lat: 55.752565,
+        lng: 37.614624
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: myLatLng,
+        scrollwheel: false
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: ''
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&amp;callback=initMap"></script>
   <script src="static/js/components.js"></script>
   <script src="static/js/blocks.js"></script>
 </body>

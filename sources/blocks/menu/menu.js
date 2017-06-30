@@ -28,4 +28,19 @@ $(function () {
             });
         }
     });
+
+    $(window).on('scroll.Menu', function () {
+        var $curr = $('.menu__btn_lvl_1:first');
+        var pos = $(this).scrollTop() + $('.header').outerHeight();
+        $('.section[id]').each(function () {
+            if (pos >= $(this).offset().top) {
+                $curr = $('[href$="#' + $(this).attr('id') + '"]');
+            }
+        });
+        if ($curr.length) {
+            $curr.parent().addClass('menu__item_current').siblings().removeClass('menu__item_current');
+            //location.hash = $curr.attr('href');
+        }
+        //console.log($curr.attr('href'));
+    }).triggerHandler('scroll.Menu');
 });

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Medical Target — Medical Target</title>
+  <title>Beauty Target — Medical Target</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <!-- Favicons-->
@@ -640,6 +640,98 @@
       </div>
     </div>
   </section>
+  <section id="prices" class="section section_prices">
+    <header class="section__header">
+      <div class="container-fluid">
+        <h2 class="section__title">Тарифные планы</h2>
+        <p class="section__lead">Центр превентивной медицины</p>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="tariffs-list">
+        <div class="tariffs-list__row row">
+          <div class="tariffs-list__col col-xs-12 col-sm-6 col-md-3">
+            <article class="tariff-item">
+              <header class="tariff-item__header">
+                <h3 class="tariff-item__title">Минимальный</h3>
+              </header>
+              <div class="tariff-item__inner">
+                <div class="tariff-item__price">
+                  <div class="tariff-item__digit">1&nbsp;999.-</div>в месяц</div>
+                <div class="tariff-item__text">
+                  <p>Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.</p>
+                </div>
+                <footer class="tariff-item__footer">
+                  <div class="btn btn_3">Выбрать план</div>
+                </footer>
+              </div>
+            </article>
+          </div>
+          <div class="tariffs-list__col col-xs-12 col-sm-6 col-md-3">
+            <article class="tariff-item">
+              <header class="tariff-item__header">
+                <h3 class="tariff-item__title">Базовый</h3>
+              </header>
+              <div class="tariff-item__inner">
+                <div class="tariff-item__price">
+                  <div class="tariff-item__digit">2&nbsp;499.-</div>в месяц</div>
+                <div class="tariff-item__text">
+                  <p>Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.</p>
+                </div>
+                <footer class="tariff-item__footer">
+                  <div class="btn btn_3">Выбрать план</div>
+                </footer>
+              </div>
+            </article>
+          </div>
+          <div class="tariffs-list__col col-xs-12 col-sm-6 col-md-3">
+            <article class="tariff-item">
+              <header class="tariff-item__header">
+                <h3 class="tariff-item__title">Про</h3>
+              </header>
+              <div class="tariff-item__inner">
+                <div class="tariff-item__price">
+                  <div class="tariff-item__digit">3&nbsp;999.-</div>в месяц</div>
+                <div class="tariff-item__text">
+                  <p>Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.</p>
+                </div>
+                <footer class="tariff-item__footer">
+                  <div class="btn btn_3">Выбрать план</div>
+                </footer>
+              </div>
+            </article>
+          </div>
+          <div class="tariffs-list__col col-xs-12 col-sm-6 col-md-3">
+            <article class="tariff-item">
+              <header class="tariff-item__header">
+                <h3 class="tariff-item__title">Премиум</h3>
+              </header>
+              <div class="tariff-item__inner">
+                <div class="tariff-item__price">
+                  <div class="tariff-item__digit">15&nbsp;799.-</div>в год</div>
+                <div class="tariff-item__text">
+                  <p>Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.</p>
+                </div>
+                <footer class="tariff-item__footer">
+                  <div class="btn btn_3">Выбрать план</div>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contacts" class="section section_contacts">
+    <header class="section__header">
+      <div class="container-fluid">
+        <h2 class="section__title">Контакты</h2>
+        <p class="section__lead">Центр превентивной медицины</p>
+      </div>
+    </header>
+    <div id="map" class="section__map"></div>
+    <div class="container-fluid"></div>
+  </section>
   </div>
   <footer class="footer">
     <div class="container-fluid">
@@ -682,6 +774,29 @@
   </footer>
   </div>
   <!-- JS-->
+  <script>
+    var map;
+
+    function initMap() {
+      var myLatLng = {
+        lat: 55.752565,
+        lng: 37.614624
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: myLatLng,
+        scrollwheel: false
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: ''
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&amp;callback=initMap"></script>
   <script src="static/js/components.js"></script>
   <script src="static/js/blocks.js"></script>
 </body>

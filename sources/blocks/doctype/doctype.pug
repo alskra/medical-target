@@ -24,7 +24,24 @@ mixin doctype(title)
     body.-page&attributes(attributes)
       block
       // JS
-      //- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4')
+      script.
+        var map;
+        function initMap() {
+            var myLatLng = {lat: 55.752565, lng: 37.614624};
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: myLatLng,
+                scrollwheel:  false
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: ''
+            });
+        }
+      script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap')
       if isDevelopment
         script(src="static/js/components.js")
         script(src="static/js/blocks.js")

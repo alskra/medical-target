@@ -19,7 +19,7 @@ block variables
     paths.imgContent = `${paths.imgContent}/${suffix}`;
 
 
-+doctype(pages.medical.title)
++doctype(pageTitle)
   +aside-slideout().slideout-menu.slideout-menu-left
   .-wrapper.slideout-panel.slideout-panel-left
     +header()
@@ -141,4 +141,83 @@ block variables
                     div &nbsp;
                     div &nbsp;
                     +a().-btn._3 Показать ещё
+      section.-section._prices(id='prices')
+        header.__header
+          .-container-fluid
+            h2.-section.__title Тарифные планы
+            p.-section.__lead
+              block section-prices__lead
+                | Центр превентивной медицины
+        .-container-fluid
+          .-tariffs-list
+            .__row.row
+              .__col.col-xs-12.col-sm-6.col-md-3
+                article.-tariff-item
+                  header.__header
+                    h3.__title Минимальный
+                  .__inner
+                    .__price
+                      .__digit 1&nbsp;999.-
+                      | в месяц
+                    .__text
+                      block tariff-item__text
+                        p.
+                          Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.
+                          Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    footer.__footer
+                      .-btn._3 Выбрать план
+              .__col.col-xs-12.col-sm-6.col-md-3
+                article.-tariff-item
+                  header.__header
+                    h3.__title Базовый
+                  .__inner
+                    .__price
+                      .__digit 2&nbsp;499.-
+                      | в месяц
+                    .__text
+                      block tariff-item__text
+                        p.
+                          Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.
+                          Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    footer.__footer
+                      .-btn._3 Выбрать план
+              .__col.col-xs-12.col-sm-6.col-md-3
+                article.-tariff-item
+                  header.__header
+                    h3.__title Про
+                  .__inner
+                    .__price
+                      .__digit 3&nbsp;999.-
+                      | в месяц
+                    .__text
+                      block tariff-item__text
+                        p.
+                          Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.
+                          Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    footer.__footer
+                      .-btn._3 Выбрать план
+              .__col.col-xs-12.col-sm-6.col-md-3
+                article.-tariff-item
+                  header.__header
+                    h3.__title Премиум
+                  .__inner
+                    .__price
+                      .__digit 15&nbsp;799.-
+                      | в год
+                    .__text
+                      block tariff-item__text
+                        p.
+                          Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи.
+                          Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
+                    footer.__footer
+                      .-btn._3 Выбрать план
+      section.-section._contacts(id='contacts')
+        header.__header
+          .-container-fluid
+            h2.-section.__title Контакты
+            p.-section.__lead
+              block section-contacts__lead
+                | Центр превентивной медицины
+        .__map(id='map')
+        .-container-fluid
     +footer()

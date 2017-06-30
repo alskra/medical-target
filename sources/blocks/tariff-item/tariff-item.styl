@@ -1,0 +1,73 @@
+.tariff-item
+  display flex
+  flex 0 0 100%
+  flex-flow column
+  color #888
+  text-align center
+  min-height 100%
+  transition $transition-base
+  cursor pointer
+  p
+    display inline
+  &:hover, &:focus
+    & {r}__header
+      color white
+      background-color $blue-1
+
+    & {r}__inner
+      border-color $blue-1
+      box-shadow inset 0 0 0 1px $blue-1
+
+    & {r}__digit
+      color $blue-1
+
+    .btn_3
+      color white
+      background $blue-1
+      border-color $blue-1
+
+  &__header
+    flex none
+    color $headings-color
+    padding rem(28px) rem(25px)
+    background-color #dfdfdf
+    transition inherit
+
+  &__title
+    color inherit
+    text-overflow ellipsis
+    font-size 18px
+    text-transform uppercase
+    font-weight 700
+    margin 0
+
+  &__inner
+    flex 1 0 auto
+    padding rem(45px) rem(25px) rem(50px)
+    background-color white
+    border 1px solid #dfdfdf
+    border-top 0
+    transition inherit
+
+  &__price
+    font-size 13px
+    text-transform uppercase
+    transition inherit
+    margin-bottom 2.5em
+
+  &__digit
+    color #666
+    font-size 40px
+    line-height 1em
+    text-transform uppercase
+    white-space nowrap
+    text-indent 0.5em
+    transition inherit
+    margin-bottom 0.1em
+
+  &__text
+    overflow hidden
+    line-height ($line-height-base)em
+    height ($line-height-base)em*3
+    line-clamp(3)
+    margin-bottom rem(80px)

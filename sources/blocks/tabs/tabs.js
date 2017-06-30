@@ -3,6 +3,7 @@ $(function () {
         var $tabs = $(this), $tabsNavItem = $tabs.find('.tabs__nav-item'), $tabsContentItem = $tabs.find('.tabs__content-item');
         $tabsNavItem.eq(0).addClass('tabs__nav-item_opened');
         $tabsContentItem.hide().eq(0).addClass('tabs__content-item_opened').show();
+        $tabs.addClass('tabs_init');
 
         $tabsNavItem.on('click', function () {
             $tabsNavItem.not($(this).addClass('tabs__nav-item_opened')).removeClass('tabs__nav-item_opened');

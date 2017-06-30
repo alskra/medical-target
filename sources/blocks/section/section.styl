@@ -1,5 +1,5 @@
 .section
-  padding rem(40px) 0
+  padding rem(35px) 0
 
   &__header
     text-align center
@@ -33,8 +33,13 @@
         max-width unquote('calc(100% - ' + $grid-gutter-width + ')')
         margin 0 ($grid-gutter-width/2) rem(20px)
 
+  &_contacts
+    & {r}__map
+      height 100vh
+      max-height 550px
+
   @media (min-width $screen-md-min)
-    padding rem(60px) 0
+    padding rem(55px) 0
 
     &__title
       font-size rem(40px)
