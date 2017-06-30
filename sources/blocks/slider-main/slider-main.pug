@@ -40,7 +40,7 @@ include ../countdown/countdown
   ]
 
 mixin slider-main(sliderMain)
-  .-slider-main.slick-slider(data-slick='{"autoplay": true, "autoplaySpeed": 7000}' data-slideout-ignore)&attributes(attributes)
+  .-slider-main.slick-slider(data-slick='{"autoplay": true, "autoplaySpeed": 7000, "pauseOnHover": false}' data-slideout-ignore)&attributes(attributes)
     .__item.slick-slide.loading
       img.__img(data-lazy=`${paths.imgContent}/slider-main/1920/slide-1.jpg`
       data-lazy-srcset=`${paths.imgContent}/slider-main/1366/slide-1.jpg 1366w, ${paths.imgContent}/slider-main/1920/slide-1.jpg 1920w, ${paths.imgContent}/slider-main/4096/slide-1.jpg 4096w`
