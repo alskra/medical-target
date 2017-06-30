@@ -41,8 +41,10 @@ body
     background transparent
 
   ::-webkit-scrollbar-thumb
-    background #9e9e9e
+    background rgba(#9e9e9e, 0.5)
     transition $transition-base
+    &:hover
+      background rgba(#9e9e9e, 1)
 
 :focus
   outline 0
