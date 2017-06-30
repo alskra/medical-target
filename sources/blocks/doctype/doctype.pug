@@ -7,6 +7,8 @@ mixin doctype(title)
     head
       meta(charset="utf-8")
       title!= title ? title + ' — ' + package.description : package.description
+      meta(name="description" content="Mer")
+      link(rel="image_src" href=`${paths.imgGeneral}/header-logo-${suffix}.svg`)
       meta(http-equiv="X-UA-Compatible" content="IE=edge")
       meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
       //-meta(name="viewport" content="width=1024")

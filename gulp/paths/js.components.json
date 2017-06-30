@@ -6,5 +6,6 @@
   "sources/components/slick-carousel/add-on/slick.js",
   "bower_components/slideout.js/dist/slideout.js",
   "bower_components/jquery-mask-plugin/dist/jquery.mask.js",
-  "bower_components/jquery-validation/dist/jquery.validate.js"
+  "bower_components/jquery-validation/dist/jquery.validate.js",
+  "node_modules/goodshare.js/goodshare.min.js"
 ]

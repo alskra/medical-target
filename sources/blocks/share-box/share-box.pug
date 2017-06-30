@@ -1,13 +1,13 @@
 mixin share-box()
   // goodshare.js https://github.com/koddr/goodshare.js/blob/master/README.md
   .-share-box
-    | Поделиться:&nbsp;
-    +a().__item(data-social='facebook' title='Facebook') Facebook
-      //-span.__counter(data-counter='fb')
-    | ,&nbsp
-    +a().__item(data-social='twitter' title='Twitter') Twitter
-      //-span.__counter(data-counter='tw')
-    | ,&nbsp
-    +a().__item(data-social='pinterest' title='Twitter') Pinterest
-      //-span.__counter(data-counter='tw')
-  // /goodshare.js
+    +a().__item(data-social='facebook' title='Facebook')
+      span.__btn.glyphicon.glyphicon-facebook Like
+      span.__counter(data-counter='facebook') 0
+    +a().__item(data-social='twitter' title='Twitter')
+      span.__btn.glyphicon.glyphicon-twitter Tweet
+      //-span.__counter(data-counter='twitter')
+    +a().__item(data-social='vkontakte' title='VK')
+      span.__btn.glyphicon.glyphicon-vkontakte Like
+      span.__counter(data-counter='vkontakte') 0
+  <script src="https://cdn.jsdelivr.net/jquery.goodshare.js/4/goodshare.min.js"></script>

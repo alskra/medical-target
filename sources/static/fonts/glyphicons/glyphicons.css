@@ -47,70 +47,86 @@
   content: "\E006";
 }
 
-.glyphicon-fb:before {
+.glyphicon-facebook:before {
   content: "\E007";
 }
 
-.glyphicon-folder-med:before {
+.glyphicon-fb:before {
   content: "\E008";
 }
 
-.glyphicon-gp:before {
+.glyphicon-folder-med:before {
   content: "\E009";
 }
 
-.glyphicon-heart:before {
+.glyphicon-gp:before {
   content: "\E00A";
 }
 
-.glyphicon-ins:before {
+.glyphicon-heart:before {
   content: "\E00B";
 }
 
-.glyphicon-mail:before {
+.glyphicon-ins:before {
   content: "\E00C";
 }
 
-.glyphicon-nav:before {
+.glyphicon-mail:before {
   content: "\E00D";
 }
 
-.glyphicon-plus:before {
+.glyphicon-nav:before {
   content: "\E00E";
 }
 
-.glyphicon-search:before {
+.glyphicon-plus:before {
   content: "\E00F";
 }
 
-.glyphicon-sister:before {
+.glyphicon-search:before {
   content: "\E010";
 }
 
-.glyphicon-stat:before {
+.glyphicon-share:before {
   content: "\E011";
 }
 
-.glyphicon-tablets:before {
+.glyphicon-sister:before {
   content: "\E012";
 }
 
-.glyphicon-tel-med:before {
+.glyphicon-stat:before {
   content: "\E013";
 }
 
-.glyphicon-tel:before {
+.glyphicon-tablets:before {
   content: "\E014";
 }
 
-.glyphicon-tw:before {
+.glyphicon-tel-med:before {
   content: "\E015";
 }
 
-.glyphicon-user:before {
+.glyphicon-tel:before {
   content: "\E016";
 }
 
-.glyphicon-viewers:before {
+.glyphicon-tw:before {
   content: "\E017";
+}
+
+.glyphicon-twitter:before {
+  content: "\E018";
+}
+
+.glyphicon-user:before {
+  content: "\E019";
+}
+
+.glyphicon-viewers:before {
+  content: "\E01A";
+}
+
+.glyphicon-vkontakte:before {
+  content: "\E01B";
 }
