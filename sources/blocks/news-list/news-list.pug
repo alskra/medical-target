@@ -22,7 +22,7 @@ mixin news-list(newsList)
       each newItem, index in newsList
         .__col.col-xs-12.col-md-6
           article.-new-item
-            +a(`${suffix}/new-${index + 1}.html`).__inner(data-fancybox='new?1' data-type='ajax' data-fancybox--group)
+            +a(`popups/${suffix}/new-1.html`).__inner(data-fancybox='new?1' data-type='ajax' data-fancybox--group)
               .__img-wrap
                 .__viewers.glyphicon.glyphicon-viewers(data-val=7*(index + 1))
                 img.__img(src=`${paths.imgContent}/news-list/295x295/${newItem.img}`
