@@ -1,0 +1,17 @@
+mixin personnel-item(personnel, noLink)
+  article.-personnel-item&attributes(attributes)
+    unless noLink
+      +a(`popups/${suffix}/personnel-1.html`).__img-wrap.glyphicon.glyphicon-plus(data-fancybox='personnel?1' data-type='ajax' data-fancybox--group)
+        img.__img(src=`${paths.imgContent}/personnel-list/295x295/${personnel.img}`
+        srcset=`${paths.imgContent}/personnel-list/295x295/${personnel.img} 1x, ${paths.imgContent}/personnel-list/590x590/${personnel.img} 1.25x`
+        alt='' data-object-fit='cover' onload='objectFit(this)')
+      h3.__title
+        +a(`popups/${suffix}/personnel-1.html`).__title-link(data-fancybox='personnel?2' data-type='ajax' data-fancybox--group) #{personnel.title}
+    else
+      .__img-wrap
+        img.__img(src=`${paths.imgContent}/personnel-list/295x295/${personnel.img}`
+        srcset=`${paths.imgContent}/personnel-list/295x295/${personnel.img} 1x, ${paths.imgContent}/personnel-list/590x590/${personnel.img} 1.25x`
+        alt='' data-object-fit='cover' onload='objectFit(this)')
+      h3.__title #{personnel.title}
+    .__description
+      p #{personnel.description}

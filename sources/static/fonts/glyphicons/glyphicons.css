@@ -23,90 +23,94 @@
 }
 
 
-.glyphicon-arr-right:before {
+.glyphicon-angle-down:before {
   content: "\E001";
 }
 
-.glyphicon-close-2:before {
+.glyphicon-arr-right:before {
   content: "\E002";
 }
 
-.glyphicon-close:before {
+.glyphicon-close-2:before {
   content: "\E003";
 }
 
-.glyphicon-comments:before {
+.glyphicon-close:before {
   content: "\E004";
 }
 
-.glyphicon-diagnos:before {
+.glyphicon-comments:before {
   content: "\E005";
 }
 
-.glyphicon-fb:before {
+.glyphicon-diagnos:before {
   content: "\E006";
 }
 
-.glyphicon-folder-med:before {
+.glyphicon-fb:before {
   content: "\E007";
 }
 
-.glyphicon-gp:before {
+.glyphicon-folder-med:before {
   content: "\E008";
 }
 
-.glyphicon-heart:before {
+.glyphicon-gp:before {
   content: "\E009";
 }
 
-.glyphicon-ins:before {
+.glyphicon-heart:before {
   content: "\E00A";
 }
 
-.glyphicon-mail:before {
+.glyphicon-ins:before {
   content: "\E00B";
 }
 
-.glyphicon-nav:before {
+.glyphicon-mail:before {
   content: "\E00C";
 }
 
-.glyphicon-plus:before {
+.glyphicon-nav:before {
   content: "\E00D";
 }
 
-.glyphicon-search:before {
+.glyphicon-plus:before {
   content: "\E00E";
 }
 
-.glyphicon-sister:before {
+.glyphicon-search:before {
   content: "\E00F";
 }
 
-.glyphicon-stat:before {
+.glyphicon-sister:before {
   content: "\E010";
 }
 
-.glyphicon-tablets:before {
+.glyphicon-stat:before {
   content: "\E011";
 }
 
-.glyphicon-tel-med:before {
+.glyphicon-tablets:before {
   content: "\E012";
 }
 
-.glyphicon-tel:before {
+.glyphicon-tel-med:before {
   content: "\E013";
 }
 
-.glyphicon-tw:before {
+.glyphicon-tel:before {
   content: "\E014";
 }
 
-.glyphicon-user:before {
+.glyphicon-tw:before {
   content: "\E015";
 }
 
-.glyphicon-viewers:before {
+.glyphicon-user:before {
   content: "\E016";
+}
+
+.glyphicon-viewers:before {
+  content: "\E017";
 }

@@ -1,8 +1,29 @@
 .form-feedback
-  padding 50px 0
-  background-color #eee
+  max-width rem(610px)
+  margin 1rem auto 0
+
   .form-row
-    max-width 770px
+    margin-bottom rem(20px)
+
+  .btn
+    width rem(180px)
 
   &__title
-    margin-bottom 1.5em
+    color #666
+    text-align center
+    font-size rem(16px)
+    line-height 1.25em
+    font-weight 900
+    text-transform uppercase
+    margin-bottom 2.5em
+    .glyphicon
+      display inline-block
+      vertical-align top
+      font-size rem(10px)
+      margin-left rem(15px)
+
+  @media (min-width $screen-md-min)
+    max-width none
+
+    &__title
+      margin-bottom 3.5em

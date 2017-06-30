@@ -16,7 +16,7 @@ module.exports = function () {
             });
 
         //css.components
-        $.gulp.watch([$.paths.cssComponents, 'sources/components/**/*.{css,styl}', 'sources/static/**/*.{css,styl}'], $.gulp.series('css.components', function reloadCssComponents(done) {
+        $.gulp.watch([$.paths.cssComponents, JSON.parse($.fs.readFileSync($.paths.cssComponents)), 'sources/components/**/*.{css,styl}', 'sources/static/**/*.{css,styl}'], $.gulp.series('css.components', function reloadCssComponents(done) {
             $.browserSync.reload('build/static/css/components.css'); done();
         }));
 

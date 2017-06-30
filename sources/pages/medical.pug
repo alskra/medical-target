@@ -219,5 +219,37 @@ block variables
               block section-contacts__lead
                 | Центр превентивной медицины
         .__map(id='map')
-        .-container-fluid
+        .-contacts.container-fluid
+          .-row
+            section.-contacts.__section.col-xs-12.col-md-4
+              h3.__title Адрес
+              address.__addr
+                p Москва, 2-й Тверской-Ямской переулок, дом 10 (метро "Маяковская")
+            section.-contacts.__section.col-xs-12.col-md-4
+              h3.__title Наши контакты
+              address.__addr
+                p Телефон: #[+a('tel:88003003030') 8-800-300-3030] #[br]E-mail: #[+a(`mailto:${suffix}target@gmail.com`) #{suffix}target@gmail.com]
+            section.-contacts.__section.col-xs-12.col-md-4
+              h3.__title Время работы
+              p.
+                По будням с 9:00 до 18:00 #[br]По выходным с 11:00 до 18:00
+          form.-form-feedback(action='')
+            h3.__title Напишите нам#[span.glyphicon.glyphicon-angle-down]
+            .-row
+              .-col-xs-12.col-md-6
+                .-form-row
+                  label.-form-label
+                    input.-text-field.required(type='text' name='name' required data-msg-required='Введите имя')
+                    span.__text Ваше имя
+                .-form-row
+                  label.-form-label
+                    input.-text-field.required(type='email' name='email' required data-msg-required='Введите e-mail' data-msg-email='Некорректный e-mail')
+                    span.__text Ваш e-mail
+              .-col-xs-12.col-md-6
+                .-form-row
+                  label.-form-label
+                    textarea.-text-field._textarea.required(name='msg' required data-msg-required='Введите сообщение')
+                    span.__text Текст Вашего сообщения
+            .-form-row.text-center
+              button.-btn._1(type='submit') Отправить
     +footer()

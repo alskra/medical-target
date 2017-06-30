@@ -1,1 +1,39 @@
-.-popup._feedback
+form.-popup._feedback.container-fluid.form-feedback-2(action='')
+  header.__header
+    h1.__title Напишите нам
+  .-form-row
+    label.-form-label
+      input.-text-field.required(type='text' name='name' required data-msg-required='Введите имя')
+      span.__text Ваше имя
+  .-form-row
+    label.-form-label
+      input.-text-field.required(type='tel' name='tel' required minlength="15"
+      data-msg-required='Введите номер телефона' data-msg-minlength="Некорректный номер телефона" data-mask="+7-000-000-00-00")
+      span.__text Ваш номер телефона
+  .-form-row
+    label.-form-label
+      input.-text-field.required(type='email' name='email' required data-msg-required='Введите e-mail' data-msg-email='Некорректный e-mail')
+      span.__text Ваш e-mail
+  .-form-row
+    label.-form-label
+      textarea.-text-field._textarea.required(name='msg' required data-msg-required='Введите сообщение')
+      span.__text Текст Вашего сообщения
+  .-form-row.text-center
+    button.-btn._1(type='submit') Отправить
+
+  // Validate
+  script.
+      $('.form-feedback-2').validate(
+          {
+              onkeyup: function (element) {
+                  this.element(element);
+              },
+              onfocusout: function (element) {
+                  this.element(element);
+              },
+              errorElement: 'div',
+              errorPlacement: function (error, element) {
+                  error.addClass('form-msg form-msg_error').insertAfter(element.closest('.text-field, .checkbox, .radio'));
+              }
+          }
+      );

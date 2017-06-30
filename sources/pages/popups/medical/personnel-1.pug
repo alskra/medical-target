@@ -1,0 +1,27 @@
+include ../../../helpers/variables
+include ../../../helpers/mixins
+include ../../../blocks/personnel-list/personnel-list
+
+block variables
+  -
+    var pageTitle = pages.medical.title,
+    pageUrls = [pages.medical.url],
+    suffix = 'medical';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+.-popup._personnel.container-fluid
+  header.__header
+    h1.__title Сотрудники
+  +personnel-item(personnelListMedical[0], true)
+  p.
+    Терапевт – это врач, занимающийся диагностикой, лечением и профилактикой широкого
+    круга заболеваний внутренних органов. Решение записаться к терапевту в «СМ-Клиника»
+    гарантирует вам медицинскую помощь лучших специалистов Москвы – врачей высшей категории,
+    кандидатов наук, ведущих активную практическую и научно-исследовательскую деятельность.
+  p.
+    Записаться на прием к терапевту в «Medical Target», а также вызвать врача на дом можно в
+    любое время по телефону в Москве 8-800-300-3030 или через форму обратной связи на сайте.
+    В «Medical Target» платный терапевт ведет прием в будние, выходные и праздничные дни.
+  .text-center
+    div &nbsp;
+    +a().-btn._3 Записаться на приём

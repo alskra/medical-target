@@ -1,9 +1,38 @@
 .popup
-  max-width rem(730px)
+  max-width rem(640px)
+
+  &__header
+    text-align center
+    margin-bottom rem(35px)
+    &:after
+      content ''
+      display block
+      size rem(143px) rem(3px)
+      background linear-gradient(to right, #dfdfdf 33.333%, $blue-1 33.333%, $blue-1 66.666%, #dfdfdf 66.666%)
+      margin 1.2em auto 0
+
+  &__title
+    font-size rem(30px)
+    text-transform uppercase
+    margin-bottom 0.2em
 
   &_service
-    height 1000px
+    & {r}__img
+      display block
+      max-width 100%
+      margin 0 auto ($line-height-base)em
+
+  &_personnel
+    .personnel-item
+      max-width rem(295px)
+      margin 0 auto ($line-height-base)em
 
   &_album
     max-width $screen-lg-min
+
+  @media (min-width $screen-sm-min)
+    max-width rem(730px)
+
+    &__title
+      font-size rem(34px)
 

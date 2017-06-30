@@ -32,12 +32,12 @@ mixin services-list(servicesList)
       each service, index in servicesList
         .__col.col-xs-12.col-sm-6.col-md-3
           article.-service-item
-            +a(`popups/${suffix}/service-${index + 1}.html`).__img-wrap.glyphicon.glyphicon-plus(data-fancybox='service?1' data-type='ajax' data-fancybox--group)
+            +a(`popups/${suffix}/service-1.html`).__img-wrap.glyphicon.glyphicon-plus(data-fancybox='service?1' data-type='ajax' data-fancybox--group)
               img.__img(src=`${paths.imgContent}/services-list/300x188/${service.img}`
               srcset=`${paths.imgContent}/services-list/300x188/${service.img} 1x, ${paths.imgContent}/services-list/600x376/${service.img} 1.25x`
               alt='' data-object-fit='cover' onload='objectFit(this)')
             h3.__title
-              +a(`popups/${suffix}/service-${index + 1}.html`).__title-link(data-fancybox='service?2' data-type='ajax' data-fancybox--group) #{service.title}
+              +a(`popups/${suffix}/service-1.html`).__title-link(data-fancybox='service?2' data-type='ajax' data-fancybox--group) #{service.title}
             .__description
               p #{service.description}
       // Spacers

@@ -8,6 +8,14 @@ function hasVal() {
         }
     });
 }
+
 $(function () {
     hasVal();
+});
+
+$(document).ajaxComplete(function() {
+    hasVal();
+    $('[data-mask]').each(function () {
+        $(this).mask($(this).data('mask'));
+    });
 });
