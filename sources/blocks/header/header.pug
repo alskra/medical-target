@@ -14,8 +14,7 @@ mixin header()
           +a(`mailto:${suffix}target@gmail.com`) #{suffix}target@gmail.com
           br
           small Звоните с 9:00 до 18:00
-        +a(popups.feedback.url).-header.__btn-feedback.btn.btn_1.hidden-xs(data-fancybox=popups.feedback.url.split('.')[0]
-        data-options=config.fancybox.ajaxNoNav) Напишите нам
+        +a().-header.__btn-feedback.btn.btn_1.hidden-xs(data-fancybox='feedback' data-type='ajax' data-src=popups.feedback.url data-fancybox--single) Напишите нам
     .__inner-bottom.hidden-xs.hidden-sm
       .-container-fluid
     block

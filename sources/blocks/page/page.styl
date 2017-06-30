@@ -38,66 +38,18 @@
 .fancybox-bg
   background white
 
-.fancybox-inner
-  &__header
-    position absolute
-    top 0
-    right 0
-    left 0
-    background white
-    box-shadow 0 5px 29px rgba(0, 0, 0, 0.12)
-    z-index 99995
-
-  @media (min-width $screen-md-min)
-    &__header
-      height 0
-
 .fancybox-slide
   white-space nowrap
-  width auto
-  height auto
-  top 3.75rem
-  right 0
-  bottom 0
   > *
     white-space normal
     width 100%
-    padding rem(30px) $grid-gutter-width
+    padding $grid-gutter-width
     background-color white
     box-shadow 0 5px 29px rgba(0, 0, 0, 0.12)
     margin 0
-  .no-touchevents.webkit &
-    overflow-y scroll
-    overflow-x hidden
-    > *
-      width unquote('calc(100% + ' + 0.9rem + ')')
-      margin-right rem(-0.9rem)
 
   @media (min-width $screen-md-min)
-    top 0
-    padding $grid-gutter-width 4rem
-
-.fancybox-close-small
-  display block
-  color white
-  font-size rem(27px)
-  line-height 1em
-  width 3.75rem
-  height 3.75rem
-  background $blue-1
-  transition $transition-base
-  position static
-  margin 0 0 0 auto
-  &:after
-    content normal
-  &:hover, &:focus
-    background-color $black-1
-
-.fancybox-arrow
-  &:after
-    background-color $black-1
-  .fancybox-show-nav &
-    opacity 1
+    padding $grid-gutter-width
 
 //Slideout
 .slideout-menu {

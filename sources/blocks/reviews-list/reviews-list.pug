@@ -30,11 +30,12 @@
 mixin reviews-list(reviewsList)
   .-reviews-list.slick-slider&attributes(attributes)
     each review, index in reviewsList
-      article.__item.slick-slide
-        .__icon._header.glyphicon.glyphicon-comments
-        .__text
-          p #{review.text}
-        .__footer
-          .__icon._footer.glyphicon.glyphicon-user.hidden-xs
-          h3.__name #{review.name}
-          .__place #{review.place}
+      .-slick-slide
+        article.-reviews-list.__item
+          .__icon._header.glyphicon.glyphicon-comments
+          .__text
+            p #{review.text}
+          .__footer
+            .__icon._footer.glyphicon.glyphicon-user.hidden-xs
+            h3.__name #{review.name}
+            .__place #{review.place}

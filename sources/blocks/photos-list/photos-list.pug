@@ -1,0 +1,52 @@
+-
+  var photosListMedical = [
+  {
+  img: 'Fotolia_98084818_Subscription_Monthly_M1.jpg',
+  caption: 'Заголовок длинный длинный заголовок'
+  },
+  {
+  img: 'Fotolia_78678976_Subscription_Monthly_M1.jpg',
+  caption: 'Заголовок'
+  },
+  {
+  img: 'Fotolia_82745345_Subscription_Monthly_M-(2)1.jpg',
+  caption: 'Заголовок'
+  },
+  {
+  img: 'Fotolia_78678976_Subscription_Monthly_M1.jpg',
+  caption: 'Заголовок'
+  },
+  {
+  img: 'Fotolia_82745345_Subscription_Monthly_M-(2)1.jpg',
+  caption: 'Заголовок'
+  },
+  {
+  img: 'Fotolia_103968342_Subscription_Monthly_M1.jpg',
+  caption: 'Мероприятия'
+  },
+  {
+  img: 'Fotolia_98084818_Subscription_Monthly_M1.jpg',
+  caption: 'Заголовок длинный длинный заголовок'
+  }
+  ]
+
+mixin photos-list(photosList)
+  .-photos-list&attributes(attributes)
+    .__row.row
+      each photo, index in photosList
+        .__col.col-xs-6.col-sm-4.col-md-3
+          figure.-photo-item(data-fancybox=`album-1-photos` data-type='image'
+          data-src=`${paths.imgContent}/photos-list/${photo.img}` data-fancybox--gallery data-caption=`<strong>${photo.caption}</strong> &#8226; 27 сентября 2016`
+          data-options='{"clickSlide": false}')
+            img.__img(src=`${paths.imgContent}/photos-list/295x295/${photo.img}`
+            srcset=`${paths.imgContent}/photos-list/295x295/${photo.img} 1x, ${paths.imgContent}/photos-list/590x590/${photo.img} 1.25x`
+            alt=photo.caption data-object-fit='cover' onload='objectFit(this)')
+            //-
+              figcaption.__caption.glyphicon.glyphicon-plus
+                .__title(title=photo.caption) #{photo.caption}
+                +time().__date(title='27 сентября 2016') 27 сентября 2016
+      // Spacers
+      .__col.col-xs-6.col-sm-4.col-md-3
+      .__col.col-xs-6.col-sm-4.col-md-3
+      .__col.col-xs-6.col-sm-4.col-md-3
+      .__col.col-xs-6.col-sm-4.col-md-3

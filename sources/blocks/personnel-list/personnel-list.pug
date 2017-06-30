@@ -26,18 +26,18 @@ mixin personnel-list(personnelList)
   .-personnel-list&attributes(attributes)
     .__row.row
       each personnel, index in personnelList
-        .__col.col-xs-12.col-lg-3
+        .__col.col-xs-12.col-sm-6.col-md-3
           article.-personnel-item
-            +a(`${suffix}/personnel-${index + 1}.html`).__img-wrap.glyphicon.glyphicon-plus(data-fancybox='personnel?1' data-type='ajax')
+            +a(`${suffix}/personnel-${index + 1}.html`).__img-wrap.glyphicon.glyphicon-plus(data-fancybox='personnel?1' data-type='ajax' data-fancybox--group)
               img.__img(src=`${paths.imgContent}/personnel-list/295x295/${personnel.img}`
               srcset=`${paths.imgContent}/personnel-list/295x295/${personnel.img} 1x, ${paths.imgContent}/personnel-list/590x590/${personnel.img} 1.25x`
               alt='' data-object-fit='cover' onload='objectFit(this)')
             h3.__title
-              +a(`${suffix}/personnel-${index + 1}.html`).__title-link(data-fancybox='personnel?2' data-type='ajax') #{personnel.title}
+              +a(`${suffix}/personnel-${index + 1}.html`).__title-link(data-fancybox='personnel?2' data-type='ajax' data-fancybox--group) #{personnel.title}
             .__description
               p #{personnel.description}
       // Spacers
-      .__col.col-xs-12.col-lg-3
-      .__col.col-xs-12.col-lg-3
-      .__col.col-xs-12.col-lg-3
-      .__col.col-xs-12.col-lg-3
+      .__col.col-xs-12.col-sm-6.col-md-3
+      .__col.col-xs-12.col-sm-6.col-md-3
+      .__col.col-xs-12.col-sm-6.col-md-3
+      .__col.col-xs-12.col-sm-6.col-md-3

@@ -10,21 +10,7 @@
   {
   img: 'Fotolia_103492687_Subscription_Monthly_M.jpg',
   title: 'Стимулы обновления',
-  date: '27 сентября 2016',
-  description: 'Тематические недели пластической хирургии – наш новый формат консультаций, который сразу же полюбился пациентам. ' +
-  'И все благодаря целому ряду приятных возможностей!'
-  },
-  {
-  img: 'Fotolia_94287949_Subscription_Monthly_M.jpg',
-  title: 'Открытие Центра превентивной медицины',
-  date: '27 сентября 2016',
-  description: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
-  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
-  },
-  {
-  img: 'Fotolia_103492687_Subscription_Monthly_M.jpg',
-  title: 'Стимулы обновления',
-  date: '27 сентября 2016',
+  date: '26 сентября 2016',
   description: 'Тематические недели пластической хирургии – наш новый формат консультаций, который сразу же полюбился пациентам. ' +
   'И все благодаря целому ряду приятных возможностей!'
   }
@@ -34,16 +20,23 @@ mixin news-list(newsList)
   .-news-list&attributes(attributes)
     .__row.row
       each newItem, index in newsList
-        .__col.col-xs-12.col-lg-6
+        .__col.col-xs-12.col-md-6
           article.-new-item
-            +a(`${suffix}/new-${index + 1}.html`).__img-wrap.glyphicon.glyphicon-plus(data-fancybox='new?1' data-type='ajax')
-              img.__img(src=`${paths.imgContent}/news-list/295x295/${newItem.img}`
-              srcset=`${paths.imgContent}/news-list/295x295/${newItem.img} 1x, ${paths.imgContent}/news-list/590x590/${newItem.img} 1.25x`
-              alt='' data-object-fit='cover' onload='objectFit(this)')
-            h3.__title
-              +a(`${suffix}/new-${index + 1}.html`).__title-link(data-fancybox='new?2' data-type='ajax') #{newItem.title}
-            .__description
-              p #{newItem.description}
+            +a(`${suffix}/new-${index + 1}.html`).__inner(data-fancybox='new?1' data-type='ajax' data-fancybox--group)
+              .__img-wrap
+                .__viewers.glyphicon.glyphicon-viewers(data-val=7*(index + 1))
+                img.__img(src=`${paths.imgContent}/news-list/295x295/${newItem.img}`
+                srcset=`${paths.imgContent}/news-list/295x295/${newItem.img} 1x, ${paths.imgContent}/news-list/590x590/${newItem.img} 1.25x`
+                alt='' data-object-fit='cover' onload='objectFit(this)')
+              .__content
+                .__header
+                  h3.__title #{newItem.title}
+                  +time().__date #{newItem.date}
+                .__description
+                  p #{newItem.description}
+                span.__more Подробнее#[span.glyphicon.glyphicon-arr-right]
       // Spacers
-      .__col.col-xs-12.col-lg-6
-      .__col.col-xs-12.col-lg-6
+      .__col.col-xs-12.col-md-6
+      .__col.col-xs-12.col-md-6
+      .__col.col-xs-12.col-md-6
+      .__col.col-xs-12.col-md-6

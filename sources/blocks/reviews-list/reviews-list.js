@@ -2,7 +2,7 @@ $(function () {
     $('.reviews-list.slick-slider').slick({
         dots: true,
         arrows: false,
-        infinite: false,
+        infinite: true,
         speed: 300,
         fade: false,
         cssEase: 'ease-out',
@@ -18,14 +18,14 @@ $(function () {
         asNavFor: '',
         responsive: [
             {
-                breakpoint: $screenSm - 1,
+                breakpoint: parseInt($screenSmMin)*$fontSizeRootComputed - 1,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
             },
             {
-                breakpoint: $screenMd - 1,
+                breakpoint: parseInt($screenMdMin)*$fontSizeRootComputed - 1,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3

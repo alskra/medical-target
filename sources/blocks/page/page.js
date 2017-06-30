@@ -1,6 +1,6 @@
 var $screenSm = 768, $screenMd = 1024, $screenLg = 1280;
 
-var $fontSizeRoot = 16;
+var $fontSizeRoot = 16, $fontSizeRootComputed = parseInt($('html').css('fontSize'));
 
 var $screenSmMin = $screenSm/$fontSizeRoot + 'em'; console.log('$screenSmMin = ' + $screenSmMin + ' (' + $screenSm + 'px)');
 var $screenMdMin = $screenMd/$fontSizeRoot + 'em'; console.log('$screenMdMin = ' + $screenMdMin + ' (' + $screenMd + 'px)');

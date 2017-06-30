@@ -68,8 +68,7 @@ mixin slider-main(sliderMain)
                 h2.__article-title !{sliderMain[0].articles[2].title}
                 .__article-text
                   p !{sliderMain[0].articles[2].text}
-              +a(popups.feedback.url).-btn._2.hidden-sm.hidden-md.hidden-lg(data-fancybox=popups.feedback.url.split('.')[0]
-              data-options=`${config.fancybox.ajaxNoNav}`) Напишите нам
+              +a().-btn._2.hidden-sm.hidden-md.hidden-lg(data-fancybox='feedback' data-type='ajax' data-src=popups.feedback.url data-fancybox--single) Напишите нам
     .__item.slick-slide.loading
       img.__img(data-lazy=`${paths.imgContent}/slider-main/1920/slide-1.jpg`
       data-lazy-srcset=`${paths.imgContent}/slider-main/1366/slide-1.jpg 1366w, ${paths.imgContent}/slider-main/1920/slide-1.jpg 1920w, ${paths.imgContent}/slider-main/4096/slide-1.jpg 4096w`

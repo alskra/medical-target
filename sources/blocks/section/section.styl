@@ -29,7 +29,8 @@
       text-align center
       margin 0 (- $grid-gutter-width/2) rem(25px)
       .btn
-        width rem(185px)
+        //width rem(200px)
+        max-width unquote('calc(100% - ' + $grid-gutter-width + ')')
         margin 0 ($grid-gutter-width/2) rem(20px)
 
   @media (min-width $screen-md-min)

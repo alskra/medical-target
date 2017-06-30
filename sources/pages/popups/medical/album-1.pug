@@ -1,0 +1,13 @@
+include ../../../helpers/variables
+include ../../../helpers/mixins
+include ../../../blocks/photos-list/photos-list
+
+block variables
+  -
+    var pageTitle = pages.medical.title,
+    pageUrls = [pages.medical.url],
+    suffix = 'medical';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+.-popup._album
+  +photos-list(photosListMedical)

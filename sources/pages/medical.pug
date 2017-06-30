@@ -9,6 +9,7 @@ include ../blocks/advantages-list/advantages-list
 include ../blocks/personnel-list/personnel-list
 include ../blocks/reviews-list/reviews-list
 include ../blocks/news-list/news-list
+include ../blocks/albums-list/albums-list
 
 block variables
   -
@@ -60,8 +61,7 @@ block variables
                     Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.
               .-section.__btns
                 +a().-btn._3 Узнайте больше
-                +a(popups.feedback.url).-btn._3(data-fancybox=popups.feedback.url.split('.')[0]
-                data-options=config.fancybox.ajaxNoNav) Напишите нам
+                +a().-btn._3(data-fancybox='feedback' data-type='ajax' data-src=popups.feedback.url data-fancybox--single) Напишите нам
               block advantages-list
                 +advantages-list(advantagesListMedical)
       section.-section._personnel(id='personnel')
@@ -99,8 +99,46 @@ block variables
         .-container-fluid
           block news-list
             +news-list(newsListMedical)
-            .text-center
-              div &nbsp;
-              div &nbsp;
-              +a().-btn._3 Показать ещё
+          .text-center
+            div &nbsp;
+            div &nbsp;
+            +a().-btn._3 Показать ещё
+      section.-section._gallery(id='gallery')
+        header.__header
+          .-container-fluid
+            h2.-section.__title Фотогалерея
+            p.-section.__lead
+              block section-gallery__lead
+                | Центр превентивной медицины
+        .-container-fluid
+          block tabs-gallery
+            .-tabs(data-slideout-ignore)
+              nav.__nav
+                .__nav-inner
+                  block tabs-gallery-nav
+                    +a('#tab-1').__nav-item.btn.btn_4 Лечение
+                    +a('#tab-2').__nav-item.btn.btn_4 Диагностика
+                    +a('#tab-3').__nav-item.btn.btn_4 Клиника
+              .__content
+                .__content-item(data-id='tab-1')
+                  block tabs-gallery-content-1
+                    +albums-list(albumsListMedical)
+                  .text-center
+                    div &nbsp;
+                    div &nbsp;
+                    +a().-btn._3 Показать ещё
+                .__content-item(data-id='tab-2')
+                  block tabs-gallery-content-2
+                    +albums-list(albumsListMedical.slice(1, 6))
+                  .text-center
+                    div &nbsp;
+                    div &nbsp;
+                    +a().-btn._3 Показать ещё
+                .__content-item(data-id='tab-3')
+                  block tabs-gallery-content-3
+                    +albums-list(albumsListMedical.slice(1, 5))
+                  .text-center
+                    div &nbsp;
+                    div &nbsp;
+                    +a().-btn._3 Показать ещё
     +footer()
