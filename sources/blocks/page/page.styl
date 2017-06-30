@@ -40,18 +40,14 @@
 
 .fancybox-slide
   white-space nowrap
-  > *:not(.fancybox-loading)
+  > *
     white-space normal
-    width 100%
-    padding rem(30px) $grid-gutter-width
     background-color white
     box-shadow 0 5px 29px rgba(0, 0, 0, 0.12)
     margin 0
 
   @media (min-width $screen-sm-min)
     padding $grid-gutter-width
-    > *:not(.fancybox-loading)
-      padding rem(50px) rem(60px)
 
 //Slideout
 .slideout-menu {
