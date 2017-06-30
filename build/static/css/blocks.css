@@ -41,7 +41,7 @@
 .fancybox-slide {
   white-space: nowrap;
 }
-.fancybox-slide > * {
+.fancybox-slide > *:not(.fancybox-loading) {
   white-space: normal;
   background-color: #fff;
   -webkit-box-shadow: 0 5px 29px rgba(0,0,0,0.12);
