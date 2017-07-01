@@ -1,0 +1,11 @@
+extends ../medical/album-1
+
+block variables
+  -
+    var pageTitle = pages.beauty.title,
+    pageUrls = [pages.beauty.url],
+    suffix = 'beauty';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block photos-list
+  +photos-list(photosListBeauty)

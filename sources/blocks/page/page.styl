@@ -24,7 +24,9 @@
     width rem(30px)
     height rem(30px)
     margin rem(-15px)
-    border rem(3px) solid $blue-1
+    border-width rem(3px)
+    border-style solid
+    border-color $blue-1
     border-right-color transparent
     border-radius 50%
     top 50%
@@ -48,6 +50,14 @@
 
   @media (min-width $screen-sm-min)
     padding $grid-gutter-width
+
+.fancybox-arrow
+  visibility hidden
+  transition opacity .25s, visibility 0s linear .25s
+  .fancybox-show-nav &
+    opacity 1
+    visibility visible
+    transition opacity .25s, visibility 0s
 
 //Slideout
 .slideout-menu {
@@ -78,3 +88,292 @@
   display: block;
 }
 
+
+for $key, $val in $colors
+  .page_{$key} &
+    $blue-1 = $val;
+    $link-color = $blue-1
+    $link-hover-color = darken($link-color, 15%)
+
+    // scaffolding
+    ::selection
+      background $blue-1
+    a
+      color $link-color
+      &:hover,
+      &:focus
+        color $link-hover-color
+
+    // page
+    .loading
+      &:before
+        border-color $blue-1
+        border-right-color transparent
+
+    // header
+    .header
+      &__toggle-menu
+        color $blue-1
+        &:hover, &:focus
+          color darken($blue-1, 15%)
+      &__logo
+        color inherit
+        &:hover, &:focus
+          color inherit
+      @media (min-width $screen-md-min)
+        &__contacts
+          &:before
+            color $blue-1
+          a
+            color $black-1
+            &:hover, &:focus
+              color $blue-1
+
+    // btn
+    .btn
+      &_1
+        color white
+        background-color $blue-1
+        &:hover,
+        &:focus,
+        &.focus
+          color white
+          background-color $black-1
+      &_2
+        color white
+        background-color $blue-1
+        &:hover,
+        &:focus,
+        &.focus
+          color white
+          background-color $black-1
+      &_3
+        color $text-color
+        &:hover,
+        &:focus,
+        &.focus
+          color white
+          background $blue-1
+          border-color $blue-1
+      &_4
+        color $text-color
+        &:hover,
+        &:focus,
+        &.focus
+          color $text-color
+
+    // menu
+    .menu
+      $p = '.menu'
+      &__item
+        &_current
+          &>{$p}__btn
+            &_lvl_1
+              &, &:hover, &:focus
+                color $blue-1
+                &:before
+                  background $blue-1
+      &__btn
+        &_lvl_1
+          color $black-1
+          &:hover, &:focus
+            color $blue-1
+            &:before
+              background $blue-1
+
+    // form-search
+    .form-search
+      @media (min-width $screen-md-min)
+        &__btn
+          color $blue-1
+          &:hover, &:focus
+            color darken($blue-1, 15%)
+
+    // slider-main
+    .slider-main
+      @media (min-width $screen-sm-min)
+        &__article-icon
+          color $blue-1
+          &.glyphicon-manicur
+            font-size rem(94px)
+          &.glyphicon-volos
+            font-size rem(79px)
+          &.glyphicon-brov
+            font-size rem(66px)
+          &.glyphicon-fitness-1
+            font-size rem(81px)
+          &.glyphicon-fitness-2
+            font-size rem(69px)
+          &.glyphicon-fitness-3
+            font-size rem(74px)
+          &.glyphicon-pet-1
+            font-size rem(59px)
+          &.glyphicon-pet-2
+            font-size rem(61px)
+          &.glyphicon-pet-3
+            font-size rem(68px)
+
+    // countdown
+    .countdown
+      &__bar
+        stroke $blue-1
+
+    // text-field
+    .text-field
+      &,
+      &:active,
+      &.active
+        &:focus,
+        &.focus,
+        &.ik_select_link_focus
+          border-color $blue-1
+      &.required
+        &~.form-label__text
+          &:after
+            color $blue-1
+      &.error
+        border-color $red-1
+
+    // section
+    .section
+      &__header
+        &:after
+          background linear-gradient(to right, #dfdfdf 33.333%, $blue-1 33.333%, $blue-1 66.666%, #dfdfdf 66.666%)
+
+    // service-item
+    .service-item
+      r = '.service-item'
+      &__img-wrap
+        &:before
+          background rgba($blue-1, 0.9)
+        &:hover, &:focus
+          &~{r}__title {r}__title-link
+            color $blue-1
+      &__title-link
+        color inherit
+        &:hover, &:focus
+          color $blue-1
+
+    // advantages-list
+    .advantages-list
+      &__item
+        &-icon
+          color $blue-1
+          &.glyphicon-fitness-4
+            font-size rem(41px)
+          &.glyphicon-fitness-5
+            font-size rem(43px)
+          &.glyphicon-fitness-6
+            font-size rem(46px)
+          &.glyphicon-fitness-7
+            font-size rem(42px)
+          &.glyphicon-pet-4
+            font-size rem(40px)
+          &.glyphicon-pet-5
+            font-size rem(38px)
+          &.glyphicon-pet-6
+            font-size rem(40px)
+          &.glyphicon-pet-7
+            font-size rem(44px)
+
+    // personnel-item
+    .personnel-item
+      r = '.personnel-item'
+      &__img-wrap
+        &:before
+          background rgba($blue-1, 0.9)
+        &:hover, &:focus
+          &~{r}__title {r}__title-link
+            color $blue-1
+      &__title-link
+        color inherit
+        &:hover, &:focus
+          color $blue-1
+
+    // reviews-list
+    .reviews-list
+      &__icon
+        &_footer
+          background-color $blue-1
+
+    // new-item
+    .new-item
+      r = '.new-item'
+      &:hover, &:focus
+        & {r}__viewers
+          background $blue-1
+        & {r}__title
+          color $blue-1
+        & {r}__more
+          color $blue-1
+          .glyphicon
+            color $blue-1
+      &__inner
+        color inherit
+        &:hover, &:focus
+          color inherit
+      &__header
+        &:after
+          background-color $blue-1
+
+    // tabs
+    .tabs
+      &__nav-item
+        &_opened
+          &.btn
+            &,
+            &:hover,
+            &:focus,
+            &.focus
+              background $blue-1
+              border-color $blue-1
+
+    // album-item
+    .album-item
+      &__caption
+        background rgba($blue-1, 0.9)
+
+    // tariff-item
+    .tariff-item
+      r = '.tariff-item'
+      &:hover, &:focus
+        & {r}__header
+          background-color $blue-1
+        & {r}__inner
+          border-color $blue-1
+          box-shadow inset 0 0 0 1px $blue-1
+        & {r}__digit
+          color $blue-1
+        .btn_3
+          background $blue-1
+          border-color $blue-1
+
+    // contacts
+    .contacts
+      a
+        color $headings-color
+        &:hover, &:focus
+          color $blue-1
+      &__title
+        color $blue-1
+
+    // footer
+    .footer
+      a:not(.social-networks__item)
+        &:hover, &:focus
+          color $blue-1
+
+    // social-networks
+    .social-networks
+      &__item
+        color #888
+        &:hover, &:focus
+          color white
+          border-color $blue-1
+          background $blue-1
+
+    // popup
+    .popup
+      &__header
+        &:after
+          background linear-gradient(to right, #dfdfdf 33.333%, $blue-1 33.333%, $blue-1 66.666%, #dfdfdf 66.666%)

@@ -10,9 +10,12 @@ block variables
 
 .-popup._service.container-fluid
   header.__header
-    h1.__title Диагностика
+    h1.__title
+      block title
+        | Диагностика
   .__img-wrap
-    img.__img(src=`${paths.imgContent}/services-list/Fotolia_98084818_Subscription_Monthly_M1.jpg` alt='')
+    block img
+      img.__img(src=`${paths.imgContent}/services-list/Fotolia_98084818_Subscription_Monthly_M1.jpg` alt='')
   p.
     Тематические недели пластической хирургии – наш новый формат консультаций, который сразу же полюбился пациентам.
   p.

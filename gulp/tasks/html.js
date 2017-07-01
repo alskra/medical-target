@@ -59,7 +59,7 @@ module.exports = function () {
                 });
             }
             //console.log($.blocksObj);
-            //console.log($.blocksArr);
+            console.log($.blocksArr);
             done();
         }
     ));

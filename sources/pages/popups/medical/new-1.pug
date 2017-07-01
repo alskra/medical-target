@@ -1,6 +1,5 @@
 include ../../../helpers/variables
 include ../../../helpers/mixins
-include ../../../blocks/share-box/share-box
 
 block variables
   -
@@ -9,11 +8,16 @@ block variables
     suffix = 'medical';
     paths.imgContent = `${paths.imgContent}/${suffix}`;
 
+include ../../../blocks/share-box/share-box
+
 .-popup._new.container-fluid
   header.__header
-    h1.__title Стимулы обновления
+    h1.__title
+      block title
+        | Стимулы обновления
   .__img-wrap
-    img.__img(src=`${paths.imgContent}/news-list/Fotolia_103492687_Subscription_Monthly_M1.jpg` alt='')
+    block img
+      img.__img(src=`${paths.imgContent}/news-list/Fotolia_103492687_Subscription_Monthly_M1.jpg` alt='')
   p.
     Тематические недели пластической хирургии – наш новый формат консультаций, который сразу же полюбился пациентам.
   p.

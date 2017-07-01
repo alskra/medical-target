@@ -7,5 +7,64 @@ block variables
     suffix = 'beauty';
     paths.imgContent = `${paths.imgContent}/${suffix}`;
 
+block slider-main
+  +slider-main(sliderMainBeauty)
+
 block section-services__lead
-  | 123
+  | Салон красоты
+
+block services-list
+  +services-list(servicesListBeauty)
+
+
+block section-about__lead
+  | Салон красоты
+
+block section-about__img
+  img.img-responsive(src=`${paths.imgContent}/Fotolia_121365931_Subscription_Monthly_M.jpg` alt='')
+
+block advantages-list
+  +advantages-list(advantagesListBeauty)
+
+
+block section-personnel__lead
+  | Салон красоты
+
+block personnel-list
+  +personnel-list(personnelListBeauty)
+
+
+block section-reviews__lead
+  | Салон красоты
+
+block reviews-list
+  +reviews-list(reviewsListMedical)(data-slick='{"autoplay": true, "autoplaySpeed": 10000}' data-slideout-ignore)
+
+
+block section-news__lead
+  | Салон красоты
+
+block news-list
+  +news-list(newsListBeauty)
+
+
+block section-gallery__lead
+  | Салон красоты
+
+block tabs-gallery-nav
+  +a('#tab-1').__nav-item.btn.btn_4 Лечение
+  +a('#tab-2').__nav-item.btn.btn_4 Диагностика
+  +a('#tab-3').__nav-item.btn.btn_4 Клиника
+
+block tabs-gallery-content-1
+  +albums-list(albumsListBeauty)
+
+block tabs-gallery-content-2
+  +albums-list(albumsListBeauty.slice(1, 6))
+
+block tabs-gallery-content-3
+  +albums-list(albumsListBeauty.slice(1, 5))
+
+
+block section-prices__lead
+  | Салон красоты

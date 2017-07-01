@@ -36,6 +36,7 @@ $(function () {
             // if "smallBtn" option is not set to false
             smallBtn   : '<button data-fancybox-close class="fancybox-close-small glyphicon glyphicon-close-2" title="{{CLOSE}}"></button>'
         },
+        touch: false,
         onInit: function () {
 
         },

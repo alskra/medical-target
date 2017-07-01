@@ -1,0 +1,14 @@
+extends ../medical/personnel-1
+
+block variables
+  -
+    var pageTitle = pages.pet.title,
+    pageUrls = [pages.pet.url],
+    suffix = 'pet';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Сотрудники
+
+block personnel-item
+  +personnel-item(personnelListPet[0], true)

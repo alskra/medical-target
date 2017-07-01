@@ -1,6 +1,5 @@
 include ../../../helpers/variables
 include ../../../helpers/mixins
-include ../../../blocks/personnel-list/personnel-list
 
 block variables
   -
@@ -9,10 +8,15 @@ block variables
     suffix = 'medical';
     paths.imgContent = `${paths.imgContent}/${suffix}`;
 
+include ../../../blocks/personnel-list/personnel-list
+
 .-popup._personnel.container-fluid
   header.__header
-    h1.__title Сотрудники
-  +personnel-item(personnelListMedical[0], true)
+    h1.__title
+      block title
+        | Сотрудники
+  block personnel-item
+    +personnel-item(personnelListMedical[0], true)
   p.
     Терапевт – это врач, занимающийся диагностикой, лечением и профилактикой широкого
     круга заболеваний внутренних органов. Решение записаться к терапевту в «СМ-Клиника»

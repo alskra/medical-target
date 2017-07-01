@@ -1,0 +1,14 @@
+extends ../medical/new-1
+
+block variables
+  -
+    var pageTitle = pages.pet.title,
+    pageUrls = [pages.pet.url],
+    suffix = 'pet';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Только в мае - обследование бесплатно
+
+block img
+  img.__img(src=`${paths.imgContent}/news-list/Fotolia_103134575_Subscription_Monthly_M.jpg` alt='')

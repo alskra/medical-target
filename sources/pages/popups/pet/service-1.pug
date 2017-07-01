@@ -1,0 +1,14 @@
+extends ../medical/service-1
+
+block variables
+  -
+    var pageTitle = pages.pet.title,
+    pageUrls = [pages.pet.url],
+    suffix = 'pet';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Терапия
+
+block img
+  img.__img(src=`${paths.imgContent}/services-list/Fotolia_114448933_Subscription_Monthly_M.jpg` alt='')

@@ -1,0 +1,14 @@
+extends ../medical/new-1
+
+block variables
+  -
+    var pageTitle = pages.beauty.title,
+    pageUrls = [pages.beauty.url],
+    suffix = 'beauty';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Свадебные прически за полцены
+
+block img
+  img.__img(src=`${paths.imgContent}/news-list/Fotolia_93042705_Subscription_Monthly_M.jpg` alt='')

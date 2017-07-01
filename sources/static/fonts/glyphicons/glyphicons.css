@@ -31,102 +31,186 @@
   content: "\E002";
 }
 
-.glyphicon-close-2:before {
+.glyphicon-beauty-1:before {
   content: "\E003";
 }
 
-.glyphicon-close:before {
+.glyphicon-beauty-2:before {
   content: "\E004";
 }
 
-.glyphicon-comments:before {
+.glyphicon-beauty-3:before {
   content: "\E005";
 }
 
-.glyphicon-diagnos:before {
+.glyphicon-beauty-4:before {
   content: "\E006";
 }
 
-.glyphicon-facebook:before {
+.glyphicon-brov:before {
   content: "\E007";
 }
 
-.glyphicon-fb:before {
+.glyphicon-close-2:before {
   content: "\E008";
 }
 
-.glyphicon-folder-med:before {
+.glyphicon-close:before {
   content: "\E009";
 }
 
-.glyphicon-gp:before {
+.glyphicon-comments:before {
   content: "\E00A";
 }
 
-.glyphicon-heart:before {
+.glyphicon-diagnos:before {
   content: "\E00B";
 }
 
-.glyphicon-ins:before {
+.glyphicon-facebook:before {
   content: "\E00C";
 }
 
-.glyphicon-mail:before {
+.glyphicon-fb:before {
   content: "\E00D";
 }
 
-.glyphicon-nav:before {
+.glyphicon-fitness-1:before {
   content: "\E00E";
 }
 
-.glyphicon-plus:before {
+.glyphicon-fitness-2:before {
   content: "\E00F";
 }
 
-.glyphicon-search:before {
+.glyphicon-fitness-3:before {
   content: "\E010";
 }
 
-.glyphicon-share:before {
+.glyphicon-fitness-4:before {
   content: "\E011";
 }
 
-.glyphicon-sister:before {
+.glyphicon-fitness-5:before {
   content: "\E012";
 }
 
-.glyphicon-stat:before {
+.glyphicon-fitness-6:before {
   content: "\E013";
 }
 
-.glyphicon-tablets:before {
+.glyphicon-fitness-7:before {
   content: "\E014";
 }
 
-.glyphicon-tel-med:before {
+.glyphicon-folder-med:before {
   content: "\E015";
 }
 
-.glyphicon-tel:before {
+.glyphicon-gp:before {
   content: "\E016";
 }
 
-.glyphicon-tw:before {
+.glyphicon-heart:before {
   content: "\E017";
 }
 
-.glyphicon-twitter:before {
+.glyphicon-ins:before {
   content: "\E018";
 }
 
-.glyphicon-user:before {
+.glyphicon-mail:before {
   content: "\E019";
 }
 
-.glyphicon-viewers:before {
+.glyphicon-manicur:before {
   content: "\E01A";
 }
 
-.glyphicon-vkontakte:before {
+.glyphicon-nav:before {
   content: "\E01B";
+}
+
+.glyphicon-pet-1:before {
+  content: "\E01C";
+}
+
+.glyphicon-pet-2:before {
+  content: "\E01D";
+}
+
+.glyphicon-pet-3:before {
+  content: "\E01E";
+}
+
+.glyphicon-pet-4:before {
+  content: "\E01F";
+}
+
+.glyphicon-pet-5:before {
+  content: "\E020";
+}
+
+.glyphicon-pet-6:before {
+  content: "\E021";
+}
+
+.glyphicon-pet-7:before {
+  content: "\E022";
+}
+
+.glyphicon-plus:before {
+  content: "\E023";
+}
+
+.glyphicon-search:before {
+  content: "\E024";
+}
+
+.glyphicon-share:before {
+  content: "\E025";
+}
+
+.glyphicon-sister:before {
+  content: "\E026";
+}
+
+.glyphicon-stat:before {
+  content: "\E027";
+}
+
+.glyphicon-tablets:before {
+  content: "\E028";
+}
+
+.glyphicon-tel-med:before {
+  content: "\E029";
+}
+
+.glyphicon-tel:before {
+  content: "\E02A";
+}
+
+.glyphicon-tw:before {
+  content: "\E02B";
+}
+
+.glyphicon-twitter:before {
+  content: "\E02C";
+}
+
+.glyphicon-user:before {
+  content: "\E02D";
+}
+
+.glyphicon-viewers:before {
+  content: "\E02E";
+}
+
+.glyphicon-vkontakte:before {
+  content: "\E02F";
+}
+
+.glyphicon-volos:before {
+  content: "\E030";
 }

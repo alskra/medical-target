@@ -1,0 +1,14 @@
+extends ../medical/personnel-1
+
+block variables
+  -
+    var pageTitle = pages.fitness.title,
+    pageUrls = [pages.fitness.url],
+    suffix = 'fitness';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Сотрудники
+
+block personnel-item
+  +personnel-item(personnelListFitness[0], true)

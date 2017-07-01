@@ -1,0 +1,14 @@
+extends ../medical/service-1
+
+block variables
+  -
+    var pageTitle = pages.beauty.title,
+    pageUrls = [pages.beauty.url],
+    suffix = 'beauty';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Стрижка женская
+
+block img
+  img.__img(src=`${paths.imgContent}/services-list/Fotolia_95648321_Subscription_Monthly_M.jpg` alt='')

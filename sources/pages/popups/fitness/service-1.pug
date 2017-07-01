@@ -1,0 +1,14 @@
+extends ../medical/service-1
+
+block variables
+  -
+    var pageTitle = pages.fitness.title,
+    pageUrls = [pages.fitness.url],
+    suffix = 'fitness';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | ТРЕНАЖЕРНЫЙ ЗАЛ
+
+block img
+  img.__img(src=`${paths.imgContent}/services-list/Fotolia_105369417_Subscription_Monthly_M.jpg` alt='')
