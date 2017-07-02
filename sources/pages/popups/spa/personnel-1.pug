@@ -1,0 +1,14 @@
+extends ../medical/personnel-1
+
+block variables
+  -
+    var pageTitle = pages.spa.title,
+    pageUrls = [pages.spa.url],
+    suffix = 'spa';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Сотрудники
+
+block personnel-item
+  +personnel-item(personnelListSpa[0], true)

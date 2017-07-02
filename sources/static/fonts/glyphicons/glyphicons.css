@@ -175,42 +175,70 @@
   content: "\E026";
 }
 
-.glyphicon-stat:before {
+.glyphicon-spa-1:before {
   content: "\E027";
 }
 
-.glyphicon-tablets:before {
+.glyphicon-spa-2:before {
   content: "\E028";
 }
 
-.glyphicon-tel-med:before {
+.glyphicon-spa-3:before {
   content: "\E029";
 }
 
-.glyphicon-tel:before {
+.glyphicon-spa-4:before {
   content: "\E02A";
 }
 
-.glyphicon-tw:before {
+.glyphicon-spa-5:before {
   content: "\E02B";
 }
 
-.glyphicon-twitter:before {
+.glyphicon-spa-6:before {
   content: "\E02C";
 }
 
-.glyphicon-user:before {
+.glyphicon-spa-7:before {
   content: "\E02D";
 }
 
-.glyphicon-viewers:before {
+.glyphicon-stat:before {
   content: "\E02E";
 }
 
-.glyphicon-vkontakte:before {
+.glyphicon-tablets:before {
   content: "\E02F";
 }
 
-.glyphicon-volos:before {
+.glyphicon-tel-med:before {
   content: "\E030";
+}
+
+.glyphicon-tel:before {
+  content: "\E031";
+}
+
+.glyphicon-tw:before {
+  content: "\E032";
+}
+
+.glyphicon-twitter:before {
+  content: "\E033";
+}
+
+.glyphicon-user:before {
+  content: "\E034";
+}
+
+.glyphicon-viewers:before {
+  content: "\E035";
+}
+
+.glyphicon-vkontakte:before {
+  content: "\E036";
+}
+
+.glyphicon-volos:before {
+  content: "\E037";
 }

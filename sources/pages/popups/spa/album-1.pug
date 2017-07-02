@@ -1,0 +1,11 @@
+extends ../medical/album-1
+
+block variables
+  -
+    var pageTitle = pages.spa.title,
+    pageUrls = [pages.spa.url],
+    suffix = 'spa';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block photos-list
+  +photos-list(photosListSpa)

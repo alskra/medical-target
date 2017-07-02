@@ -1,0 +1,14 @@
+extends ../medical/new-1
+
+block variables
+  -
+    var pageTitle = pages.spa.title,
+    pageUrls = [pages.spa.url],
+    suffix = 'spa';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Скидка 50% на сеанс тайского массажа
+
+block img
+  img.__img(src=`${paths.imgContent}/news-list/Fotolia_104022499_Subscription_Monthly_M.jpg` alt='')
