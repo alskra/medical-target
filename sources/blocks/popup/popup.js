@@ -1,3 +1,5 @@
+$.fancybox.defaults.hash = false;
+
 $(function () {
     $("[data-fancybox--single]").fancybox({
         smallBtn : false,
@@ -23,6 +25,7 @@ $(function () {
         }
     });
 
+    var url;
     $("[data-fancybox--group]").fancybox({
         smallBtn : false,
         autoFocus : false,
@@ -41,6 +44,9 @@ $(function () {
 
         },
         beforeClose: function () {
+
+        },
+        afterClose: function () {
 
         }
     });
