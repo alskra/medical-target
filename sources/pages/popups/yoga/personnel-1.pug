@@ -1,0 +1,14 @@
+extends ../medical/personnel-1
+
+block variables
+  -
+    var pageTitle = pages.yoga.title,
+    pageUrls = [pages.yoga.url],
+    suffix = 'yoga';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Сотрудники
+
+block personnel-item
+  +personnel-item(personnelListYoga[0], true)

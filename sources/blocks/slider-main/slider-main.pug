@@ -191,6 +191,44 @@ include ../countdown/countdown
   }
   ];
 
+  var sliderMainYoga = [
+  {
+  title: 'Первая в России сеть специализированных центров',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.',
+  articles: [
+  {
+  icon: 'glyphicon-yoga-1',
+  title: 'Круглосуточные центры',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  },
+  {
+  icon: 'glyphicon-yoga-2',
+  title: 'Вызов терапевта на дом',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  },
+  {
+  icon: 'glyphicon-yoga-3',
+  title: 'Помощь специалиста',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  }
+  ]
+  },
+  {
+  title: 'При оформлении услуги скидка 50%',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  },
+  {
+  title: 'При оформлении услуги скидка 50%',
+  text: 'Наш формат - универсальная семейная клиника, в которой взрослым и детям оказываются все виды медицинской помощи. ' +
+  'Диагностика, лечение и профилактика заболеваний по всем направлениям современной медицины.'
+  }
+  ];
+
 mixin slider-main(sliderMain)
   .-slider-main.slick-slider(data-slick='{"autoplay": true, "autoplaySpeed": 7000, "pauseOnHover": false}' data-slideout-ignore)&attributes(attributes)
     .__item.slick-slide.loading
@@ -200,7 +238,7 @@ mixin slider-main(sliderMain)
       alt='' data-object-fit='cover' onload='objectFit(this)')
       .-container-fluid
         .-row
-          .-col-sm-10.col-md-8.col-lg-6
+          .-col-sm-10.col-md-8.col-lg-7
             .-slider-main.__content
               h1.__title !{sliderMain[0].title}
               .__text.hidden-sm
@@ -222,13 +260,13 @@ mixin slider-main(sliderMain)
                   p !{sliderMain[0].articles[2].text}
               +a().-btn._2.hidden-sm.hidden-md.hidden-lg(data-fancybox='feedback' data-type='ajax' data-src=popups.feedback.url data-fancybox--single) Напишите нам
     .__item.slick-slide.loading
-      img.__img(data-lazy=`${paths.imgContent}/slider-main/1920/slide-1.jpg`
-      data-lazy-srcset=`${paths.imgContent}/slider-main/1366/slide-1.jpg 1366w, ${paths.imgContent}/slider-main/1920/slide-1.jpg 1920w, ${paths.imgContent}/slider-main/4096/slide-1.jpg 4096w`
+      img.__img(data-lazy=`${paths.imgContent}/slider-main/1920/slide-2.jpg`
+      data-lazy-srcset=`${paths.imgContent}/slider-main/1366/slide-2.jpg 1366w, ${paths.imgContent}/slider-main/1920/slide-2.jpg 1920w, ${paths.imgContent}/slider-main/4096/slide-2.jpg 4096w`
       sizes='100vw'
       alt='' data-object-fit='cover' onload='objectFit(this)')
       .-container-fluid
         .-row
-          .-col-sm-10.col-md-8.col-lg-6
+          .-col-sm-10.col-md-8.col-lg-7
             .-slider-main.__content
               h2.__title !{sliderMain[1].title}
               .__text.hidden-sm
@@ -238,13 +276,13 @@ mixin slider-main(sliderMain)
               +countdown().hidden-xs(data-time='1514667600000')
               +a().-btn._2 Получить скидку
     .__item.slick-slide.loading
-      img.__img(data-lazy=`${paths.imgContent}/slider-main/1920/slide-1.jpg`
-      data-lazy-srcset=`${paths.imgContent}/slider-main/1366/slide-1.jpg 1366w, ${paths.imgContent}/slider-main/1920/slide-1.jpg 1920w, ${paths.imgContent}/slider-main/4096/slide-1.jpg 4096w`
+      img.__img(data-lazy=`${paths.imgContent}/slider-main/1920/slide-3.jpg`
+      data-lazy-srcset=`${paths.imgContent}/slider-main/1366/slide-3.jpg 1366w, ${paths.imgContent}/slider-main/1920/slide-3.jpg 1920w, ${paths.imgContent}/slider-main/4096/slide-3.jpg 4096w`
       sizes='100vw'
       alt='' data-object-fit='cover' onload='objectFit(this)')
       .-container-fluid
         .-row
-          .-col-sm-10.col-md-8.col-lg-6
+          .-col-sm-10.col-md-8.col-lg-7
             .-slider-main.__content
               h2.__title.hidden-xs !{sliderMain[2].title}
               .__text.hidden-xs.hidden-sm

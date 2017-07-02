@@ -1,0 +1,14 @@
+extends ../medical/new-1
+
+block variables
+  -
+    var pageTitle = pages.yoga.title,
+    pageUrls = [pages.yoga.url],
+    suffix = 'yoga';
+    paths.imgContent = `${paths.imgContent}/${suffix}`;
+
+block title
+  | Открытие Центра превентивной медицины
+
+block img
+  img.__img(src=`${paths.imgContent}/news-list/Fotolia_118363858_Subscription_Monthly_M.jpg` alt='')

@@ -7,6 +7,8 @@
     margin 0
   .slick-list, .slick-track, .slick-slide
     height 100%
+  .form-order, .btn
+    text-shadow none
 
   &__item
     position relative
@@ -17,6 +19,7 @@
     left 0
 
   &__content
+    text-shadow 0 1px 0 rgba(white, 0.7)
     padding rem(30px) 0
     opacity 1
     transition 0.2s linear
@@ -32,7 +35,6 @@
     line-height 1.25em
     max-height 1.25em*3
     line-clamp 3
-    text-shadow 1px 1px 1px rgba(white)
     margin 0 0 0.5em
 
   &__text
@@ -42,7 +44,6 @@
     line-height (24/18)em
     max-height (24/18)em*4
     line-clamp 4
-    text-shadow 1px 1px 1px rgba(white)
     margin 0 0 2em
 
   @media (min-width $screen-sm-min)
@@ -79,6 +80,7 @@
       position absolute
       top 0.3rem
       left 0
+      text-shadow none
       &.glyphicon-sister
         font-size rem(74px)
       &.glyphicon-heart
@@ -88,14 +90,12 @@
       font-size rem(24px)
       text-overflow ellipsis
       overflow hidden
-      text-shadow 1px 1px 1px rgba(white)
       margin 0 0 0.5em
 
     &__article-text
       overflow hidden
       max-height (24/18)em*2
       line-clamp 2
-      text-shadow 1px 1px 1px rgba(white)
 
     &__action
       color $black-1
