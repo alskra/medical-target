@@ -220,7 +220,7 @@ mixin albums-list(albumsList)
             srcset=`${paths.imgContent}/photos-list/295x295/${album.img} 1x, ${paths.imgContent}/photos-list/590x590/${album.img} 1.25x`
             alt=album.caption data-object-fit='cover' onload='objectFit(this)')
             figcaption.__caption.glyphicon.glyphicon-plus
-              .__title(title=album.caption) #{album.caption}
+              .__title(title!=album.caption) !{album.caption}
               +time().__date(title='27 сентября 2016') 27 сентября 2016
       // Spacers
       .__col.col-xs-12.col-sm-4.col-md-3

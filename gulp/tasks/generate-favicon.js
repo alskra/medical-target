@@ -3,7 +3,7 @@
 module.exports = function () {
     $.gulp.task('generate-favicon', function(done) {
         $.gp.realFavicon.generateFavicon({
-            masterPicture: 'sources/static/favicon/like.svg',
+            masterPicture: $.config.favicon.masterPicture,
             dest: 'build/favicon/',
             iconsPath: '/favicon/',
             design: $.config.favicon.design,
@@ -11,7 +11,7 @@ module.exports = function () {
                 scalingAlgorithm: 'Mitchell',
                 errorOnImageTooSmall: false
             },
-            markupFile: $.paths.favicon
+            markupFile: $.config.favicon.markupFile
         }, function() {
             done();
         });

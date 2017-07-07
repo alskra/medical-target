@@ -20,7 +20,7 @@ module.exports = function () {
                 $.gp.pug({
                     locals: {
                         package: $.package,
-                        faviconCode: $.faviconData.favicon.html_code,
+                        faviconCode: JSON.parse($.fs.readFileSync($.config.favicon.markupFile)).favicon.html_code,
                         isDevelopment: $.isDevelopment
                     }
                 }),

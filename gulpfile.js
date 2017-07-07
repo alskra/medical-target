@@ -7,8 +7,7 @@ global.$ = {
         tasks: require('./gulp/paths/tasks.js'),
         cssComponents: './gulp/paths/css.components.json',
         jsComponents: './gulp/paths/js.components.json',
-        fonts: './gulp/paths/fonts.json',
-        favicon: './sources/static/favicon/faviconData.json'
+        fonts: './gulp/paths/fonts.json'
     },
     gulp: require('gulp'),
     gp: require('gulp-load-plugins')(),
@@ -20,8 +19,6 @@ global.$ = {
     fs: require('fs'),
     autoprefixerStylus: require('autoprefixer-stylus'),
     path: require('path'),
-
-    faviconData: require('./sources/static/favicon/faviconData.json'),
 
     blocksObj: {},
     blocksArr: [],

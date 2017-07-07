@@ -167,14 +167,14 @@ mixin services-list(servicesList)
       each service, index in servicesList
         .__col.col-xs-12.col-sm-6.col-md-3
           article.-service-item
-            +a(`popups/${suffix}/service-1.html`).__img-wrap.glyphicon.glyphicon-plus(data-fancybox='service?1' data-type='ajax' data-fancybox--group)
+            +a().__img-wrap.glyphicon.glyphicon-plus(data-fancybox='service?1' data-type='ajax' data-src=`popups/${suffix}/service-1.html` data-fancybox--group)
               img.__img(src=`${paths.imgContent}/services-list/295x185/${service.img}`
               srcset=`${paths.imgContent}/services-list/295x185/${service.img} 1x, ${paths.imgContent}/services-list/590x370/${service.img} 1.25x`
               alt='' data-object-fit='cover' onload='objectFit(this)')
             h3.__title
-              +a(`popups/${suffix}/service-1.html`).__title-link(data-fancybox='service?2' data-type='ajax' data-fancybox--group) #{service.title}
+              +a().__title-link(data-fancybox='service?2' data-type='ajax' data-src=`popups/${suffix}/service-1.html` data-fancybox--group) !{service.title}
             .__description
-              p #{service.description}
+              p !{service.description}
       // Spacers
       .__col.col-xs-12.col-sm-6.col-md-3
       .__col.col-xs-12.col-sm-6.col-md-3

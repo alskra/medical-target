@@ -6,6 +6,7 @@ module.exports = {
         cascade: false
     },
     favicon: {
+        masterPicture: './sources/static/favicon/like.svg',
         design: {
             ios: {
                 pictureAspect: 'backgroundAndMargin',
@@ -52,6 +53,7 @@ module.exports = {
                 pictureAspect: 'silhouette',
                 themeColor: '#d75a4a'
             }
-        }
+        },
+        markupFile: './sources/static/favicon/faviconData.json'
     }
 };

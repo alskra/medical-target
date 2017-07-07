@@ -107,7 +107,7 @@ mixin news-list(newsList)
       each newItem, index in newsList
         .__col.col-xs-12.col-md-6
           article.-new-item
-            +a(`popups/${suffix}/new-1.html`).__inner(data-fancybox='new?1' data-type='ajax' data-fancybox--group)
+            +a().__inner(data-fancybox='new?1' data-type='ajax' data-src=`popups/${suffix}/new-1.html` data-fancybox--group)
               .__img-wrap
                 .__viewers.glyphicon.glyphicon-viewers(data-val=7*(index + 1))
                 img.__img(src=`${paths.imgContent}/news-list/295x295/${newItem.img}`
@@ -115,10 +115,10 @@ mixin news-list(newsList)
                 alt='' data-object-fit='cover' onload='objectFit(this)')
               .__content
                 .__header
-                  h3.__title #{newItem.title}
-                  +time().__date #{newItem.date}
+                  h3.__title !{newItem.title}
+                  +time().__date !{newItem.date}
                 .__description
-                  p #{newItem.description}
+                  p !{newItem.description}
                 span.__more Подробнее#[span.glyphicon.glyphicon-arr-right]
       // Spacers
       .__col.col-xs-12.col-md-6
