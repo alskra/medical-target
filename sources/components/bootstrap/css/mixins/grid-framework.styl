@@ -31,7 +31,7 @@ calc-grid-column($index, $class, $type)
   if $type == width and $index > 0
     .col-{$class}-{$index}
       flex 0 0 percentage(($index / $grid-columns))
-      max-width percentage(($index / $grid-columns))
+      width percentage(($index / $grid-columns))
   else if $type == push
     if $index == 0
       .col-{$class}-push-0
